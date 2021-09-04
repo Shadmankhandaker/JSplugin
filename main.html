@@ -1,0 +1,1222 @@
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="2.css"> -->
+</head>
+
+<style>
+    .back {
+        background-image: url(1.1-2.png);
+        height: 100%;
+        /* width: 1920px; */
+        /* position: absolute; */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .icon {
+        margin-top: 330px;
+        margin-left: 90px;
+    }
+
+    .main {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        height: 450px;
+        width: 300px;
+        border-radius: 30px;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(50px);
+        border-radius: 30px;
+        margin-top: 85px;
+        margin-left: 80px;
+        padding: 10px
+    }
+
+
+    .title {
+        font-family: 'Poppins';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 45px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-top: 5px;
+        color: black;
+    }
+
+    .sub-title {
+        font-family: 'Poppins';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 2px;
+        color: black;
+    }
+
+    .down-sub-title {
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 2px;
+        color: black;
+        letter-spacing: .5px;
+        margin-top: 40px;
+    }
+
+    .input-field {
+
+        background: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        outline: none;
+
+        height: 35px;
+        border: white;
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+
+    .varification-filed {
+        outline: none;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+        text-align: center;
+        right: 4px;
+        margin-top: 30px
+    }
+
+    .varified-circle {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background: #E5EFFA;
+        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.1), 3px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-varified {
+        margin-top: 45px;
+        text-align: center;
+    }
+
+    /* 5 */
+    .record-circle {
+        height: 180px;
+        width: 180px;
+        border-radius: 500px;
+        margin-left: 45px;
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        border-radius: 500px;
+    }
+
+    .img-1 img {
+        border-radius: 50%;
+        height: 155px;
+        width: 155px;
+        margin-top: 13px;
+        margin-left: 13px;
+    }
+
+    .record {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        margin-top: 8px;
+        background: rgba(239, 246, 252, 0.4);
+        backdrop-filter: blur(30px);
+        border-radius: 100px;
+        left: 115px;
+    }
+
+    .record-1 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
+        backdrop-filter: blur(30px);
+        border-radius: 100px;
+        left: 10px;
+        top: 10px;
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
+        box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .record-2 {
+        position: absolute;
+        background: #97AAC3;
+        height: 25px;
+        width: 25px;
+        border-radius: 0px;
+        margin-top: 8px;
+        margin-left: 8px;
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
+        box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7), 3px 3px 10px rgba(0, 0, 0, 0.18);
+        border-radius: 100px;
+        border: 2px solid #97AAC3;
+    }
+
+    .record-3 {
+        position: absolute;
+        background: #97AAC3;
+        height: 5px;
+        width: 5px;
+        border-radius: 0px;
+        margin-top: 8px;
+        margin-left: 8px;
+
+    }
+
+    /* 5 End */
+    .r {
+        outline: none;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+        text-align: center;
+        right: 5px;
+
+    }
+
+    /* 6 */
+
+    .img-2 img {
+
+        border-radius: 50%;
+        height: 155px;
+        width: 155px;
+        margin-top: 13px;
+        margin-left: 13px;
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+
+        -webkit-filter: brightness(60%);
+    }
+
+    .number {
+        height: 50px;
+        width: 47px;
+        border-radius: nullpx;
+        font-family: 'Poppins';
+        font-size: 55px;
+        margin-left: 75px;
+        margin-top: -130px;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 108px;
+        letter-spacing: 0em;
+        color: white;
+    }
+
+    .record-2-6 {
+        position: absolute;
+        background: #97AAC3;
+        height: 20px;
+        width: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        background: #F88686;
+        border-radius: 5px;
+    }
+
+    .stop {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 36px;
+        text-align: left;
+        color: rgba(44, 48, 55, 1);
+
+    }
+
+    .time {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 36px;
+        text-align: right;
+        color: rgba(44, 48, 55, 1);
+    }
+
+    .arrow {
+        height: 60px;
+        width: 60px;
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
+        box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.2), 5px 3px 10px rgba(0, 0, 0, 0.18);
+        border-radius: 50px;
+        padding: 2px;
+    }
+
+    /* 6 End */
+
+    /* 7 */
+    .recorded-circle-7 {
+        height: 120px;
+        width: 120px;
+        border-radius: 500px;
+        margin-left: 80px;
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        border-radius: 500px;
+    }
+
+    .img-7-1 img {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .img-7 img {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-top: 5px;
+        margin-left: 5px;
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+    }
+
+    .img-7 {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+        /* background: rgba(0, 0, 0, 0.6); */
+        -webkit-filter: brightness(60%);
+    }
+
+    /* 7 End */
+    .btn {
+        margin-top: 20px;
+        margin-left: 28px;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 80%;
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
+        box-shadow: -1px -3px 5px rgb(255 255 255 / 20%), 5px 3px 5px rgb(0 0 0 / 10%);
+        border-radius: 100px;
+        color: rgba(123, 148, 181, 1);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .small-circle {
+        height: 40px;
+        width: 40px;
+        border-radius: 500px;
+        /* margin-left: 25px; */
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+
+        border-radius: 500px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* 8 Start */
+
+    .button-1 {
+        height: 35px;
+        width: 115px;
+        margin-top: 50px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .in {
+        margin-top: 5px;
+        height: 40px;
+        width: 100%;
+        left: 1376px;
+        top: 521px;
+        border-radius: 10px;
+        outline: none;
+        background: #EFF6FC;
+        box-shadow: inset -2px -5px 4px rgb(255 255 255 / 40%), inset 2px 5px 4px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        box-shadow: 2px 5px 4px 0px rgb(0 0 0 / 10%) inset;
+        box-shadow: -2px -5px 4px 0px rgb(255 255 255 / 40%) inset;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .new {
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        margin-top: 5px;
+        border-radius: 500px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+        border-radius: 500px;
+    }
+
+    .last {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 21px;
+        margin-top: 16px;
+        color: #2C3037;
+    }
+
+    .btn-text {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 5px;
+        text-align: center;
+        color: #7B94B5;
+    }
+
+    /* 8 End */
+
+
+    /* 9 */
+    .circle-9{
+        height: 110px;
+        width: 110px;
+        border-radius: 500px;
+        margin-left: 75px;
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+        border-radius: 500px;
+    }
+
+    .img-1-9 img{
+        border-radius: 50%;
+        height: 95px;
+        width: 95px;
+        margin-top: 8px;
+        margin-left: 8px;
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+    }
+
+    .img-2-9 img{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-top: 5px;
+        margin-left: 5px;
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .button-9{
+        height: 40px;
+        width: 110px;
+        margin-top: 45px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+    }
+
+    .sub{
+        height: 40px;
+        width: 100%;
+        left: 0px;
+        margin-top: 80px;
+        top: 0px;
+        border-radius: 100px;
+        position: absolute;
+        background: linear-gradient(
+    135.07deg
+    , #F1F9FF 6.66%, #DCE8F7 104.83%);
+        box-shadow: -1px -3px 5px rgb(255 255 255 / 30%), 5px 3px 10px rgb(0 0 0 / 18%);
+        border-radius: 100px;
+    }
+
+    .new-9{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 5px;
+        text-align: center;
+        color: #7B94B5;
+    }
+    
+    
+    ::placeholder {
+        position: absolute;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        top: 5px;
+        left: 15px;
+        color: #7B94B5;
+
+    }
+</style>
+
+<!doctype html>
+<html lang="en">
+
+
+<body>
+    <div class="container back" style="margin-top:50px">
+        <div class="row">
+            <div class="col-md-8">
+                <div onclick="my1()" class="icon" id="logo">
+                    <a style="text-decoration: none;">
+                        <svg width="61" height="65" viewBox="0 0 81 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M44.2301 59.1712C45.0635 59.1712 45.8217 59.3592 46.5047 59.7352C47.1878 60.1112 47.7274 60.6478 48.1236 61.3451L45.8695 62.5756L45.84 62.515C45.5093 61.8581 44.9726 61.5297 44.2301 61.5297C43.8886 61.5297 43.6051 61.6083 43.3797 61.7655C43.1543 61.9227 43.0416 62.1244 43.0416 62.3705C43.0416 62.808 43.6632 63.184 44.9063 63.4985C45.3435 63.5942 45.7397 63.707 46.0949 63.8368C46.4501 63.9667 46.8087 64.1513 47.1707 64.3906C47.5327 64.6298 47.8162 64.9477 48.0211 65.3442C48.226 65.7407 48.3285 66.1987 48.3285 66.7182C48.3285 67.771 47.9323 68.5845 47.14 69.1587C46.3476 69.7193 45.3708 69.9996 44.2096 69.9996C42.1058 69.9996 40.6714 69.1861 39.9063 67.5591L42.2014 66.2671L42.2234 66.327C42.5462 67.1757 43.2083 67.6001 44.2096 67.6001C45.1522 67.6001 45.6236 67.3061 45.6236 66.7182C45.6236 66.2807 45.002 65.9048 43.7588 65.5903C43.2943 65.4672 42.8981 65.3442 42.5703 65.2211C42.2424 65.0981 41.8872 64.9169 41.5047 64.6777C41.1222 64.4384 40.8319 64.1308 40.6338 63.7548C40.4357 63.3788 40.3367 62.9379 40.3367 62.432C40.3367 61.4203 40.7055 60.6273 41.4432 60.0531C42.1946 59.4652 43.1236 59.1712 44.2301 59.1712ZM21.8695 59.1712C22.8688 59.1712 23.7791 59.4105 24.6004 59.889C25.4217 60.3675 26.0446 61.0101 26.4689 61.8168L24.1897 63.1498L24.1524 63.0759C23.9474 62.6869 23.6484 62.3765 23.2555 62.1449C22.838 61.8988 22.3691 61.7758 21.8489 61.7758C21.055 61.7758 20.3979 62.039 19.8777 62.5653C19.3575 63.0917 19.0975 63.7651 19.0975 64.5854C19.0975 65.3784 19.3575 66.0483 19.8777 66.5952C20.3979 67.1147 21.055 67.3745 21.8489 67.3745C22.3828 67.3745 22.8585 67.2549 23.276 67.0156C23.6935 66.7764 24.0049 66.4448 24.2103 66.021L26.51 67.3335L26.4571 67.4274C26.0088 68.2035 25.3865 68.8217 24.5901 69.2818C23.762 69.7603 22.8551 69.9996 21.8695 69.9996C20.3226 69.9996 19.029 69.48 17.9886 68.4409C16.962 67.4019 16.4486 66.1167 16.4486 64.5854C16.4486 63.0541 16.962 61.7689 17.9886 60.7298C19.029 59.6908 20.3226 59.1712 21.8695 59.1712ZM7.57429 54.9414C11.7136 54.9414 15.0921 58.3123 15.0921 62.4987C15.0921 64.2664 14.4731 65.895 13.4405 67.1798L15.0921 67.1797V69.9996L7.59916 69.9995C7.59087 69.9995 7.58258 69.9996 7.57429 69.9996L7.54901 69.9994L7.51776 69.9996L7.51767 69.9991L7.44866 69.9986C3.31124 69.9321 0 66.5874 0 62.4987C0 58.3123 3.37847 54.9414 7.57429 54.9414ZM53.649 56.8025V59.6709H55.9593V62.2114H53.649V66.473L53.6499 66.5346C53.6597 66.8583 53.748 67.0972 53.9148 67.2515C54.092 67.4154 54.351 67.5076 54.6917 67.5281C55.0325 67.5486 55.455 67.5452 55.9593 67.5179V69.915L55.846 69.9275C54.1199 70.1126 52.8867 69.9411 52.1463 69.413C51.3898 68.8735 51.0116 67.8935 51.0116 66.473V62.2114H49.2329V59.6709H51.0116V57.6016L53.649 56.8025ZM32.9538 59.1148C35.9195 59.1148 38.3498 61.5213 38.3799 64.5289L38.3802 64.529V69.9432H35.8366L35.8368 69.1665C35.0001 69.6938 34.011 69.9996 32.9538 69.9996C29.913 69.9996 27.4709 67.5629 27.4709 64.5854C27.4709 61.5515 29.913 59.1148 32.9538 59.1148ZM32.9538 61.6527C31.3178 61.6527 30.0145 62.9531 30.0145 64.5854C30.0145 66.1613 31.3178 67.4617 32.9538 67.4617C34.5333 67.4617 35.8366 66.1613 35.8366 64.5854C35.8366 62.9531 34.5333 61.6527 32.9538 61.6527ZM7.54603 57.7613C4.93935 57.7613 2.82623 59.8697 2.82623 62.4705C2.82623 65.0713 4.93935 67.1797 7.54603 67.1797C10.1527 67.1797 12.2658 65.0713 12.2658 62.4705C12.2658 59.8697 10.1527 57.7613 7.54603 57.7613Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M25.436 0C39.484 0 50.8721 11.3881 50.8721 25.436C50.8721 26.3871 50.8199 27.3259 50.7182 28.2498C53.8903 30.5088 55.9593 34.217 55.9593 38.4084C55.9593 45.2919 50.3791 50.8721 43.4956 50.8721C40.7613 50.8721 38.2327 49.9916 36.1777 48.4987C44.049 44.8269 49.7284 37.2443 50.7182 28.2498C48.6804 26.7982 46.1877 25.9448 43.4956 25.9448C36.6121 25.9448 31.032 31.5249 31.032 38.4084C31.032 42.5576 33.0594 46.2332 36.1777 48.4987C32.9149 50.0217 29.2748 50.8721 25.436 50.8721C11.3881 50.8721 0 39.484 0 25.436C0 11.3881 11.3881 0 25.436 0Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="55.9593" height="70" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div id="draggable" class="">
+
+                    <!-- 1st Start-->
+                    <div id="first" style="display: none;">
+                        <div class="main">
+                            <p class="title">Welcome To Qcast</p>
+                            <p class="sub-title">Select what you want to do.You can create a Qcast or view Qcasts
+                                created by
+                                others.</p>
+
+                            <button type="button" onclick="my2()" class="btn btn-outline-light">Record a
+                                Qcast</button>
+                            <button type="button" class="btn btn-outline-light">View Qcast Responses</button>
+                            <button type="button" class="btn btn-outline-light">Search By Tag</button>
+                        </div>
+
+                    </div>
+                    <!-- 1st End-->
+
+                    <div class="clear:both"></div>
+
+                    <!-- 2nd Start-->
+                    <div class="main" style="display:none;" id="second">
+                        <p class="title">Welcome To Qcast</p>
+                        <p class="sub-title">Please provide your phone number to continue</p>
+
+                        <input id="phone" type="tel" class="input-field" placeholder="Enter Phone Number"
+                            style="margin-top:20px;">
+                        <button type="button" class="btn btn-outline-light" onclick="my3()"
+                            style="margin-top:50px;">Continue</button>
+
+                        <p class="down-sub-title">By continuing you agree to<span style="color:white"> Qcast's terms and
+                                conditions</span> and <span style="color:white"> privacy policy </span> </p>
+                    </div>
+                    <!-- 2nd Start-->
+
+
+
+                    <!-- 3rd Div -->
+                    <div id="third" style="display: none;" class="main">
+                        <p class="title">Welcome To Qcast</p>
+                        <p class="sub-title">Please provide your code number to continue</p>
+                        <div class="row" style="margin-bottom:100px">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-2">
+                                <input type="text" class="varification-filed" placeholder="1">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="varification-filed" placeholder="2">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="varification-filed" placeholder="3">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="varification-filed" placeholder="4">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <p class="down-sub-title">Resend New Code in: 00:59 <br> Didn't recieve a varification code?
+                            <br>
+                            <span style="color:white"> Resend Code | Change Number </span> </p>
+
+                        <button type="button" onclick="my4()" class="btn btn-outline-light">Continue</button>
+                    </div>
+
+                    <!-- 4th -->
+                    <div class="main" id="fourth" style="display: none;">
+                        <p class="title">Welcome To Qcast</p>
+
+                        <div class="row" style="margin-bottom:30px; height: 110px;">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="varified-circle">
+                                    <div class="icon-varified">
+                                        <svg width="64" height="44" viewBox="0 0 74 54" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M72.0123 11.1064L31.3869 51.7307C30.1681 52.9495 28.5682 53.5629 26.9683 53.5629C25.3684 53.5629 23.7686 52.9495 22.5498 51.7307L2.23764 31.4186C-0.206818 28.9753 -0.206818 25.0247 2.23764 22.5814C4.68095 20.137 8.63031 20.137 11.0748 22.5814L26.9683 38.475L63.1751 2.26932C65.6185 -0.17514 69.5678 -0.17514 72.0123 2.26932C74.4556 4.71263 74.4556 8.66199 72.0123 11.1064Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="clear:both"></div>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+                        <p class="down-sub-title">Account Verified</p>
+
+                        <button type="button" class="btn btn-outline-light" onclick="my5()">Record Qcast</button>
+
+                    </div>
+
+                    <!-- 5th -->
+                    <div class="main" id="fifth" style="display:none;">
+                        <p class="title">Record Qcast</p>
+
+                        <div class="row" style="margin-bottom:30px; height: 150px;">
+                            <div class="col-md-12">
+                                <div class="record-circle">
+                                    <div class="img-1">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                                <div class="clear:both"></div>
+                            </div>
+
+                        </div>
+
+                        <p class="down-sub-title">Start Recording</p>
+
+                        <a href="#" onclick="my6()">
+                            <div class="record">
+                                <div class="record-1">
+                                    <div class="record-2">
+                                        <div class="record-3">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <!-- 6th -->
+
+                    <div class="main" id="sixth" style="display:none;">
+                        <p class="title">Record Qcast</p>
+
+                        <div class="row" style="margin-bottom:30px; height: 150px;">
+                            <div class="col-md-12">
+                                <div class="record-circle">
+                                    <div class="img-2">
+                                        <img src="check.png" height="30px" width="30px">
+                                        <div class="number">
+                                            5
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear:both"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="time">00.60 </p>
+                            </div>
+                            <div class="col-md-5">
+                                <p class="stop">Next &nbsp;<span class="arrow">
+                                        <a href="#">
+
+                                            <svg width="18" height="12" viewBox="0 0 18 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.2033 7.42938L10.7216 1.0582C10.3261 0.669482 9.68478 0.669482 9.28931 1.0582C8.89376 1.447 8.89376 2.07727 9.28931 2.46607L14.0421 7.13782L1.51277 7.13782C0.953478 7.13782 0.5 7.58356 0.5 8.13332C0.5 8.68299 0.953478 9.12881 1.51277 9.12881L14.0421 9.12881L9.28947 13.8006C8.89393 14.1894 8.89393 14.8196 9.28947 15.2084C9.48717 15.4027 9.74644 15.5 10.0056 15.5C10.2648 15.5 10.524 15.4027 10.7218 15.2084L17.2033 8.83725C17.5989 8.44845 17.5989 7.81818 17.2033 7.42938Z"
+                                                    fill="#97AAC3" />
+                                            </svg>
+
+                                        </a>
+                                </p>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <a href="#" onclick="my7()">
+                            <div class="record">
+                                <div class="record-1">
+                                    <div class="record-2-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row" style="margin-top:70px">
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2">
+                                1.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                2.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                3.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                4.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7th -->
+                    <div class="main" style="display:none;" id="seventh">
+                        <p class="title">Review Qcast</p>
+
+                        <div class="row" style="margin-bottom:12px; height: 100px;">
+                            <div class="col-md-12">
+                                <div class="recorded-circle-7">
+                                    <div class="img-7-1">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row" style="margin-top:18px;">
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2">
+                                1.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                2.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                3.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                4.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                5.
+                                <div class="small-circle">
+                                    <div class="img-7">
+                                        <img src="check.png " height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                        </div>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <a href="#" onclick="my8()">
+                                    <div class="button-1" >
+                                        <p class="btn-text"> 
+                                            <span style="margin-top:10px">
+                                                <svg width="17" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www. w3.org/2000/svg">
+                                                   <path d="M12.4974 3.33774L16.5858 7.42608L6.23697 17.7749L2.15091 13.6866L12.4974 3.33774ZM19.6881 2.35173L17.8648 0.52847C17.1602 -0.176157 16.016 -0.176157 15.309 0.52847L13.5625 2.27497L17.6509 6.36335L19.6881 4.32615C20.2346 3.7796 20.2346 2.89824 19.6881 2.35173ZM0.011377 19.433C-0.0630262 19.7679 0.239299 20.0679 0.574189 19.9865L5.13 18.8819L1.04394 14.7936L0.011377 19.433Z" fill="#97AAC3" />
+                                                </svg> 
+                                            </span>
+                                            Edit Qcast
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-md-1">
+
+                            </div>
+
+                            <div class="col-md-5">
+                                <a href="#">
+                                    <div class="button-1">
+                                        <p class="btn-text"> <span style="margin-top:10px">
+                                                <svg width="14" height="18" viewBox="0 0 16 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.4701 0V3.90313H10.1709V20H5.29915V3.90313H0V0H15.4701Z"
+                                                        fill="#97AAC3" />
+                                                </svg> </span> Transcript</p>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="in" placeholder="Enter Qcast Title">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="in" placeholder="Add tag">
+                            </div>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <div style="margin-top:16px; margin-left:-20px;">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 0C11.4696 0 10.9609 0.210714 10.5858 0.585787C10.2107 0.96086 10 1.46957 10 2V10H2C1.46957 10 0.96086 10.2107 0.585787 10.5858C0.210714 10.9609 0 11.4696 0 12C0 12.5304 0.210714 13.0391 0.585787 13.4142C0.96086 13.7893 1.46957 14 2 14H10V22C10 22.5304 10.2107 23.0391 10.5858 23.4142C10.9609 23.7893 11.4696 24 12 24C12.5304 24 13.0391 23.7893 13.4142 23.4142C13.7893 23.0391 14 22.5304 14 22V14H22C22.5304 14 23.0391 13.7893 23.4142 13.4142C23.7893 13.0391 24 12.5304 24 12C24 11.4696 23.7893 10.9609 23.4142 10.5858C23.0391 10.2107 22.5304 10 22 10H14V2C14 1.46957 13.7893 0.96086 13.4142 0.585787C13.0391 0.210714 12.5304 0 12 0Z"
+                                                fill="#2C3037" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="new">
+                                    <div style="margin-top: 12px; margin-left:13px;">
+                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.5014 0.785889C8.1604 0.785889 7.83338 0.921348 7.59226 1.16247C7.35114 1.40358 7.21568 1.73061 7.21568 2.0716V7.21446H2.07282C1.73183 7.21446 1.4048 7.34992 1.16369 7.59104C0.922568 7.83216 0.787109 8.15918 0.787109 8.50017C0.787109 8.84117 0.922568 9.16819 1.16369 9.40931C1.4048 9.65043 1.73183 9.78589 2.07282 9.78589H7.21568V14.9287C7.21568 15.2697 7.35114 15.5968 7.59226 15.8379C7.83338 16.079 8.1604 16.2145 8.5014 16.2145C8.84239 16.2145 9.16941 16.079 9.41053 15.8379C9.65165 15.5968 9.78711 15.2697 9.78711 14.9287V9.78589H14.93C15.271 9.78589 15.598 9.65043 15.8391 9.40931C16.0802 9.16819 16.2157 8.84117 16.2157 8.50017C16.2157 8.15918 16.0802 7.83216 15.8391 7.59104C15.598 7.34992 15.271 7.21446 14.93 7.21446H9.78711V2.0716C9.78711 1.73061 9.65165 1.40358 9.41053 1.16247C9.16941 0.921348 8.84239 0.785889 8.5014 0.785889Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <p class="last">Add Thumbnail</p>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 8th -->
+                    <div class="main" style="display: none;" id="eight">
+                        <p class="title">Review Qcast</p>
+
+                        <div class="row" style="margin-bottom:25px; height: 100px;">
+                            <div class="col-md-12">
+                                <div class="circle-9">
+                                    <div class="img-1-9">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row" style="margin-bottom:15px;">
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="small-circle">
+                                    <div class="img-2-9">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="small-circle">
+                                    <div class="img-2-9">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="small-circle">
+                                    <div class="img-2-9">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="small-circle">
+                                    <div class="img-2-9">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="small-circle">
+                                    <div class="img-2-9">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+                        </div>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <a href="">
+                                    <div class="button-1">
+                                        <p class="btn-text">
+                                            <span style="margin-top:10px">
+                                                <svg width="15" height="18" viewBox="0 0 17 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.24013 3.53337H4.01762L5.54666 2.01609C5.76814 1.79461 5.89257 1.49422 5.89257 1.181C5.89257 0.867779 5.76814 0.567387 5.54666 0.345907C5.32518 0.124426 5.02479 0 4.71157 0C4.39835 0 4.09796 0.124426 3.87648 0.345907L0.347914 3.87447C0.237672 3.98381 0.150171 4.1139 0.0904572 4.25723C0.0307438 4.40056 0 4.55429 0 4.70956C0 4.86483 0.0307438 5.01857 0.0904572 5.1619C0.150171 5.30523 0.237672 5.43531 0.347914 5.54465L3.87648 9.07322C4.09796 9.2947 4.39835 9.41912 4.71157 9.41912C5.02479 9.41912 5.32518 9.2947 5.54666 9.07322C5.76814 8.85174 5.89257 8.55134 5.89257 8.23812C5.89257 7.9249 5.76814 7.62451 5.54666 7.40303L4.01762 5.88575H8.24013C9.40327 5.88575 10.5403 6.23066 11.5074 6.87687C12.4745 7.52307 13.2283 8.44155 13.6734 9.51615C14.1185 10.5907 14.235 11.7732 14.0081 12.914C13.7812 14.0548 13.221 15.1027 12.3986 15.9251C11.5761 16.7476 10.5282 17.3077 9.38745 17.5346C8.24666 17.7615 7.0642 17.6451 5.98959 17.2C4.91499 16.7548 3.99652 16.0011 3.35031 15.034C2.70411 14.0668 2.35919 12.9298 2.35919 11.7667C2.35919 11.4547 2.23528 11.1556 2.0147 10.935C1.79412 10.7144 1.49495 10.5905 1.18301 10.5905C0.871063 10.5905 0.571895 10.7144 0.351317 10.935C0.13074 11.1556 0.00681993 11.4547 0.00681993 11.7667C0.00681993 13.3951 0.489695 14.9869 1.39438 16.3409C2.29907 17.6948 3.58494 18.7501 5.08938 19.3733C6.59382 19.9964 8.24926 20.1595 9.84637 19.8418C11.4435 19.5241 12.9105 18.74 14.062 17.5885C15.2134 16.4371 15.9976 14.97 16.3152 13.3729C16.6329 11.7758 16.4699 10.1204 15.8467 8.61593C15.2236 7.11149 14.1683 5.82563 12.8143 4.92094C11.4604 4.01625 9.86853 3.53337 8.24013 3.53337Z"
+                                                        fill="#97AAC3" />
+                                                </svg>
+                                            </span>
+                                            Undo Trim</p>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-md-1">
+
+                            </div>
+
+                            <div class="col-md-5">
+                                <a href="#">
+                                    <div class="button-1">
+                                        <p class="btn-text"> <span style="margin-top:10px">
+                                                <svg width="20" height="18" viewBox="0 0 22 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.5856 4.03641C15.5856 4.03641 12.4229 6.02343 9.14711 8.08218L7.66103 7.16581C7.46858 7.0449 7.33166 6.85245 7.28557 6.62972C7.2377 6.40853 7.28403 6.17635 7.41131 5.98544C8.52013 4.08906 7.88376 1.6533 5.98887 0.54293C5.14583 0.0513831 4.20067 -0.0949824 3.30975 0.0577467C2.19152 0.249951 1.16239 0.916599 0.546605 1.96989C-0.562221 3.86782 0.0741495 6.30358 1.97053 7.41086C1.99266 7.42513 3.80174 8.56115 6.09422 9.99935C3.80661 11.4375 1.99296 12.5733 1.96899 12.5894C0.0726084 13.6951 -0.563762 16.1324 0.545064 18.0304C1.16055 19.0834 2.18993 19.7501 3.30845 19.9425C4.19937 20.0952 5.14453 19.9473 5.98758 19.4555C7.88242 18.3467 8.52033 15.9094 7.40972 14.013C7.28398 13.8236 7.2379 13.593 7.28577 13.3687C7.33365 13.1475 7.47032 12.9536 7.66277 12.8342L9.14706 11.9178C9.57825 12.1915 11.581 13.3703 12.0028 13.636H18.2313L12.2495 9.9993L21.9223 4.02045C20.0099 2.94364 17.6044 2.85604 15.5856 4.03641ZM5.18098 18.0829C4.68943 18.3693 4.13579 18.4711 3.57578 18.3741C2.8788 18.2547 2.27455 17.8362 1.91639 17.2253C1.25303 16.091 1.63336 14.6274 2.77067 13.9607C2.83585 13.9241 2.90913 13.9162 2.97734 13.8843C3.41644 13.6792 3.89039 13.5853 4.37736 13.6664C4.77673 13.7364 5.13946 13.9113 5.44949 14.1598C5.67859 14.341 5.88556 14.5591 6.03341 14.8168C6.69703 15.9541 6.31854 17.4193 5.18098 18.0829ZM6.03371 5.18187C5.88581 5.44125 5.67889 5.65761 5.44979 5.84067C5.13951 6.08582 4.77678 6.26221 4.37766 6.33067C3.89068 6.4134 3.41674 6.32128 2.97918 6.11431C2.91072 6.08403 2.83764 6.07612 2.77251 6.03948C1.63341 5.37284 1.25492 3.90918 1.91823 2.77336C2.27614 2.16399 2.88069 1.74547 3.57762 1.62456C4.13763 1.52756 4.69127 1.63093 5.18282 1.91575C6.31854 2.58091 6.69703 4.04456 6.03371 5.18187Z"
+                                                        fill="#97AAC3" />
+                                                </svg> </span> Trim Video</p>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                            </div>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <div class="sub">
+                                        <p class="new-9">Save</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#logo').draggable();
+        });
+    </script>
+
+    <script>
+        $.noConflict();
+        $('#draggable').draggable();
+    </script>
+
+
+    <script>
+        function my1() {
+            document.getElementById("first").style.display = "block";
+        }
+
+        function my2() {
+            document.getElementById("first").style.display = "none";
+            document.getElementById("second").style.display = "block";
+        }
+
+        function my3() {
+            document.getElementById("second").style.display = "none";
+            document.getElementById("third").style.display = "block";
+        }
+
+        function my4() {
+            document.getElementById("third").style.display = "none";
+            document.getElementById("fourth").style.display = "block";
+        }
+
+        function my5() {
+            document.getElementById("fourth").style.display = "none";
+            document.getElementById("fifth").style.display = "block";
+        }
+
+        function my6() {
+            document.getElementById("fifth").style.display = "none";
+            document.getElementById("sixth").style.display = "block";
+        }
+
+        function my7() {
+            document.getElementById("sixth").style.display = "none";
+            document.getElementById("seventh").style.display = "block";
+        }
+
+        function my8() {
+            document.getElementById("seventh").style.display = "none";
+            document.getElementById("eight").style.display = "block";
+        }
+
+        // function my9(){
+        //     document.getElementById("seventh").style.display = "none";
+        //     document.getElementById("eight").style.display = "block";
+        // }
+    </script>
+
+
+    <script>
+        // var telInput = $("#phone"),
+        //     errorMsg = $("#error-msg"),
+        //     validMsg = $("#valid-msg");
+
+
+        // telInput.intlTelInput({
+
+        //     allowExtensions: true,
+        //     formatOnDisplay: true,
+        //     autoFormat: true,
+        //     autoHideDialCode: true,
+        //     autoPlaceholder: true,
+        //     defaultCountry: "auto",
+        //     ipinfoToken: "yolo",
+
+        //     nationalMode: false,
+        //     numberType: "MOBILE",
+
+        //     preferredCountries: ['sa', 'ae', 'qa', 'om', 'bh', 'kw', 'ma'],
+        //     preventInvalidNumbers: true,
+        //     separateDialCode: true,
+        //     initialCountry: "auto",
+        //     geoIpLookup: function (callback) {
+        //         $.get("http://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+        //             var countryCode = (resp && resp.country) ? resp.country : "";
+        //             callback(countryCode);
+        //         });
+        //     },
+        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+        // });
+
+        // var reset = function () {
+        //     telInput.removeClass("error");
+        //     errorMsg.addClass("hide");
+        //     validMsg.addClass("hide");
+        // };
+
+
+        // telInput.blur(function () {
+        //     reset();
+        //     if ($.trim(telInput.val())) {
+        //         if (telInput.intlTelInput("isValidNumber")) {
+        //             validMsg.removeClass("hide");
+        //         } else {
+        //             telInput.addClass("error");
+        //             errorMsg.removeClass("hide");
+        //         }
+        //     }
+        // });
+
+
+        // telInput.on("keyup change", reset);
+    </script>
+</body>
+
+</html>
