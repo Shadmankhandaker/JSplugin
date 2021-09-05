@@ -8,6 +8,8 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" href="2.css"> -->
+
+
 </head>
 
 <style>
@@ -328,7 +330,6 @@
         object-fit: cover;
         background-size: cover;
         position: relative;
-        /* background: rgba(0, 0, 0, 0.6); */
         -webkit-filter: brightness(60%);
     }
 
@@ -437,7 +438,7 @@
 
 
     /* 9 */
-    .circle-9{
+    .circle-9 {
         height: 110px;
         width: 110px;
         border-radius: 500px;
@@ -449,7 +450,7 @@
         border-radius: 500px;
     }
 
-    .img-1-9 img{
+    .img-1-9 img {
         border-radius: 50%;
         height: 95px;
         width: 95px;
@@ -460,7 +461,8 @@
         position: relative;
     }
 
-    .img-2-9 img{
+
+    .img-2-9 img {
         border-radius: 50%;
         height: 30px;
         width: 30px;
@@ -470,8 +472,8 @@
         background-size: cover;
         position: relative;
     }
-    
-    .button-9{
+
+    .button-9 {
         height: 40px;
         width: 110px;
         margin-top: 45px;
@@ -484,7 +486,7 @@
         border-radius: 10px;
     }
 
-    .sub{
+    .sub {
         height: 40px;
         width: 100%;
         left: 0px;
@@ -492,14 +494,12 @@
         top: 0px;
         border-radius: 100px;
         position: absolute;
-        background: linear-gradient(
-    135.07deg
-    , #F1F9FF 6.66%, #DCE8F7 104.83%);
+        background: linear-gradient(135.07deg, #F1F9FF 6.66%, #DCE8F7 104.83%);
         box-shadow: -1px -3px 5px rgb(255 255 255 / 30%), 5px 3px 10px rgb(0 0 0 / 18%);
         border-radius: 100px;
     }
 
-    .new-9{
+    .new-9 {
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
@@ -509,8 +509,50 @@
         text-align: center;
         color: #7B94B5;
     }
-    
-    
+
+    /* 9 End */
+
+    /* 10 Start */
+
+    .nine-1 {
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(30px);
+        border-radius: 10px;
+    }
+
+    /* 10 End */
+
+    .recorded-circle-13 {
+        height: 100px;
+        width: 100px;
+        border-radius: 500px;
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+        border-radius: 500px;
+        margin-top: 23px
+    }
+
+    .img-7-13 img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+
+        margin-top: 10px;
+        margin-left: 10px;
+        object-fit: cover;
+        background-size: cover;
+        position: relative;
+    }
+
     ::placeholder {
         position: absolute;
         font-family: 'Poppins';
@@ -522,6 +564,60 @@
         left: 15px;
         color: #7B94B5;
 
+    }
+
+    .icon-1 {
+        background: #97AAC3;
+        box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 100px;
+        position: absolute;
+        height: 24.10843849182129px;
+        width: 24.10843849182129px;
+        border-radius: 100px;
+
+    }
+
+    .icons {
+        margin-top: 6px;
+        margin-left: 0px;
+    }
+
+    .count {
+        font-weight: bold;
+    }
+
+    .count-2 {
+        font-weight: 500;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 18px;
+        text-align: center;
+
+        /* sub_text */
+        color: #7B94B5;
+
+    }
+
+    .record-circle-small {
+        height: 100px;
+        width: 100px;
+        border-radius: 500px;
+        margin-left: 13px;
+        position: absolute;
+        background: rgba(186, 195, 201, 0.1);
+        box-shadow: 3px 10px 5px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(30px);
+    }
+
+    .img-1-small img {
+        border-radius: 50%;
+        height: 90;
+        width: 90px;
+        margin-top: 5px;
+        margin-left: 5px;
     }
 </style>
 
@@ -614,7 +710,8 @@
                             </div>
                             <div class="col-md-2"></div>
                         </div>
-                        <p class="down-sub-title">Resend New Code in: 00:59 <br> Didn't recieve a varification code?
+                        <p class="down-sub-title">Resend New Code in: <span id="timer1"> </span> <br> Didn't recieve a
+                            varification code?
                             <br>
                             <span style="color:white"> Resend Code | Change Number </span> </p>
 
@@ -709,7 +806,7 @@
 
                         <div class="row">
                             <div class="col-md-7">
-                                <p class="time">00.60 </p>
+                                <p class="time">00.59</p>
                             </div>
                             <div class="col-md-5">
                                 <p class="stop">Next &nbsp;<span class="arrow">
@@ -853,12 +950,15 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <a href="#" onclick="my8()">
-                                    <div class="button-1" >
-                                        <p class="btn-text"> 
+                                    <div class="button-1">
+                                        <p class="btn-text">
                                             <span style="margin-top:10px">
-                                                <svg width="17" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www. w3.org/2000/svg">
-                                                   <path d="M12.4974 3.33774L16.5858 7.42608L6.23697 17.7749L2.15091 13.6866L12.4974 3.33774ZM19.6881 2.35173L17.8648 0.52847C17.1602 -0.176157 16.016 -0.176157 15.309 0.52847L13.5625 2.27497L17.6509 6.36335L19.6881 4.32615C20.2346 3.7796 20.2346 2.89824 19.6881 2.35173ZM0.011377 19.433C-0.0630262 19.7679 0.239299 20.0679 0.574189 19.9865L5.13 18.8819L1.04394 14.7936L0.011377 19.433Z" fill="#97AAC3" />
-                                                </svg> 
+                                                <svg width="17" height="17" viewBox="0 0 21 20" fill="none"
+                                                    xmlns="http://www. w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.4974 3.33774L16.5858 7.42608L6.23697 17.7749L2.15091 13.6866L12.4974 3.33774ZM19.6881 2.35173L17.8648 0.52847C17.1602 -0.176157 16.016 -0.176157 15.309 0.52847L13.5625 2.27497L17.6509 6.36335L19.6881 4.32615C20.2346 3.7796 20.2346 2.89824 19.6881 2.35173ZM0.011377 19.433C-0.0630262 19.7679 0.239299 20.0679 0.574189 19.9865L5.13 18.8819L1.04394 14.7936L0.011377 19.433Z"
+                                                        fill="#97AAC3" />
+                                                </svg>
                                             </span>
                                             Edit Qcast
                                         </p>
@@ -928,7 +1028,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <a href="">
+                                <a href="#" onclick="thumb()">
                                     <p class="last">Add Thumbnail</p>
                                 </a>
                             </div>
@@ -938,6 +1038,95 @@
                         </div>
 
                     </div>
+
+
+
+
+                    <!-- Add thumbnail-->
+
+                    <div class="main" id="thumb" style="display: none;">
+                        <p class="title">Add Thumbnail</p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="sub-title" style="font-size:14px; text-align: left;">Random</p>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-light"
+                                    style="margin-top: -4px; float: right;  height: 34px; font-size: 13px; width: 78%; margin-left:0px; ">Randomize</button>
+                            </div>
+                        </div>
+
+                        <div class="row" style=" height: 125px;">
+                            <div class="col-md-6">
+                                <div class="record-circle-small">
+                                    <div class="img-1-small">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="record-circle-small">
+                                    <div class="img-1-small">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style=" height: 125px;">
+                            <div class="col-md-6">
+                                <div class="record-circle-small">
+                                    <div class="img-1-small">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="record-circle-small">
+                                    <div class="img-1-small">
+                                        <img src="check.png" height="20px" width="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-light"
+                                    style=" height: 34px; font-size: 13px; width: 90%; margin-left:5px;"
+                                    onclick="show()">Cancel</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-light"
+                                    style="  height: 34px; font-size: 13px; width: 90%; margin-left:5px; ">Use this
+                                    frame</button>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Add Thumbnail End -->
 
 
                     <!-- 8th -->
@@ -1052,7 +1241,7 @@
 
                             </div>
                             <div class="col-md-6">
-                                <a href="">
+                                <a href="#" onclick="my9()">
                                     <div class="sub">
                                         <p class="new-9">Save</p>
                                     </div>
@@ -1062,16 +1251,373 @@
 
                             </div>
                         </div>
-
-
-
-
-
-
-
-
                     </div>
 
+                    <div class="clear:both"></div>
+
+                    <!-- 9th -->
+                    <div class="main" id="ninth" style="display:none;">
+                        <p class="title">Edit Transcript</p>
+                        <p class="sub-title">Your qcast transcript, allows your questions to be found in search engine
+                            created by </p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <b>1.</b>
+                                <div class="nine-1">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                                </div>
+
+                                <b>2.</b>
+                                <div class="nine-1">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                                </div>
+
+                                <b>3.</b>
+                                <div class="nine-1">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                                </div>
+                                <div class="clear:both"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <button type="button" style="width: 60%; margin-left: 63px; height: 35px;"
+                                class="btn btn-outline-light" onclick="my10()">Save Transcript</button>
+
+                        </div>
+
+                        <div class="clear:both"></div>
+                    </div>
+
+                    <!-- 9th End -->
+
+                    <!-- 10th -->
+                    <div class="main" id="10" style="display:none;">
+                        <p class="title">Complete Signup</p>
+                        <p class="sub-title">Please complete your profile to post your Qcast in BBC </p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="text" type="text" class="input-field" placeholder="Enter your Fullname"
+                                    style="margin-top:20px; height:40px !important;">
+
+                                <input id="phone" type="email" class="input-field"
+                                    placeholder="Enter your email address"
+                                    style="margin-top:20px; height:40px !important;">
+
+                                <input id="phone" type="password" class="input-field" placeholder="Enter your password"
+                                    style="margin-top:20px; height:40px !important; ">
+
+                                <div class="clear:both"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <button type="button" style="width: 60%; margin-left: 63px; margin-top:50px"
+                                class="btn btn-outline-light" onclick="my11()">Continue</button>
+
+                        </div>
+
+                        <div class="clear:both"></div>
+                    </div>
+
+
+                    <!-- 11th -->
+                    <div class="main" id="11" style="display: none;">
+                        <p class="title">Complete Signup</p>
+                        <p class="sub-title">Please complete your profile to post your Qcast in BBC </p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="text" type="text" class="input-field" placeholder="James O'Brein"
+                                    style="margin-top:20px; height:40px !important;">
+
+                                <input id="" type="email" class="input-field" placeholder="James@gmail.com"
+                                    style="margin-top:20px; height:40px !important;">
+
+                                <input id="" type="password" class="input-field" placeholder="james123"
+                                    style="margin-top:20px; height:40px !important; ">
+
+                                <div class="clear:both"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <button type="button" style="width: 60%; margin-left: 63px; margin-top:50px"
+                                class="btn btn-outline-light" onclick="my12()">Continue</button>
+
+                        </div>
+
+                        <div class="clear:both"></div>
+                    </div>
+
+                    <!-- 11th End-->
+
+                    <!-- 12 -->
+                    <div class="main" id="12" style="display:none;">
+                        <p class="title"></p>
+                        <p class="sub-title"> </p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="varified-circle" style="left:85px !important; margin-top:65px;">
+                                    <div class="icon-varified">
+                                        <svg width="64" height="44" viewBox="0 0 74 54" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M72.0123 11.1064L31.3869 51.7307C30.1681 52.9495 28.5682 53.5629 26.9683 53.5629C25.3684 53.5629 23.7686 52.9495 22.5498 51.7307L2.23764 31.4186C-0.206818 28.9753 -0.206818 25.0247 2.23764 22.5814C4.68095 20.137 8.63031 20.137 11.0748 22.5814L26.9683 38.475L63.1751 2.26932C65.6185 -0.17514 69.5678 -0.17514 72.0123 2.26932C74.4556 4.71263 74.4556 8.66199 72.0123 11.1064Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="sub-title" style="margin-top:220px">Qcast Successfully Published </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <button type="button" style="width: 60%; margin-left: 63px; margin-top:50px"
+                                class="btn btn-outline-light" onclick="my13()">Go to Qcast Profile</button>
+                        </div>
+
+                        <div class="clear:both"></div>
+                    </div>
+
+                    <!-- 12 End -->
+
+
+                    <!-- 13-->
+                    <div class="main" id="13" style="display: none;">
+                        <p class="title">Qcast Profile</p>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="recorded-circle-13">
+                                    <div class="img-7-13">
+                                        <img src="check.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <p class="sub-title"
+                                    style="margin-top:10px; margin-left:-20px; font-weight: normal; font-size: 12px; text-align: left;">
+                                    Who really deserve your vote in the next election, and why?</p>
+                                <p style=" margin-left:-20px; font-weight:bold; margin-top:-13px">James O'Brein</p>
+                                <button class="btn btn-outline-light" onclick="my14()" style="    margin-top: -5px;
+                                margin-left: -25px;
+                                margin-bottom: 15px;
+                                height: 30px;
+                                width: 55%;
+                                font-size: 16px;
+                                background: linear-gradient(
+                            135.07deg
+                            , #F1F9FF 6.66%, #DCE8F7 104.83%);
+                                box-shadow: -1px -3px 5px rgb(255 255 255 / 20%), 5px 3px 5px rgb(0 0 0 / 10%);
+                                border-radius: 100px;
+                                color: rgba(123, 148, 181, 1);
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 12px;
+                            ">Play</button>
+                            </div>
+                        </div>
+
+                        <div class="row" style="height: 45px; background: rgba(255, 255, 255, 0.5); margin-left: -10;
+                        margin-right: -10;">
+
+                            <div class="col-md-2" style="margin-left:20px">
+                                <div class="icon-1" style="margin-top: 10px;">
+                                    <a href="#">
+                                        <svg width="10" height="14" viewBox="0 0 11 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-top: 5px;
+                                        margin-left: 8px;">
+                                            <path
+                                                d="M10.0503 6.29547L2.5214 1.13855C2.23391 0.924103 1.88996 0.79846 1.53194 0.7771C0.968985 0.7771 0.621094 1.22891 0.621094 1.98523V13.125C0.621094 13.8795 0.964468 14.3313 1.53013 14.3313C1.88677 14.31 2.22928 14.1843 2.51507 13.9699L10.0476 8.81927C10.2684 8.68765 10.4528 8.50303 10.5843 8.28213C10.7157 8.06124 10.79 7.81104 10.8003 7.55421C10.79 7.29853 10.716 7.04948 10.5851 6.82966C10.4541 6.60984 10.2703 6.42622 10.0503 6.29547Z"
+                                                fill="#BFDBE4" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="icons" style="margin-top: 10px;">
+                                    <a href="#">
+                                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.9909 0.0019918C5.42522 -0.108522 0.798606 4.39402 0.785186 9.95849C0.781899 11.318 1.04728 12.6361 1.57401 13.8764C1.58166 13.8944 1.58878 13.9127 1.59522 13.9312C2.31647 15.988 2.18758 18.2094 1.25676 20.1484C2.7031 20.5971 4.32974 20.2387 5.44508 19.1616C5.71985 18.8962 6.13097 18.8294 6.47573 18.9942C7.87336 19.6617 9.37452 19.9902 10.9377 19.9651C16.4598 19.8831 20.7854 15.4985 20.7853 9.98304C20.7854 4.58801 16.3916 0.11056 10.9909 0.0019918ZM5.45112 11.474C4.65149 11.474 4.00323 10.8268 4.00323 10.0285C4.00323 9.23025 4.65149 8.58307 5.45112 8.58307C6.25075 8.58307 6.899 9.23025 6.899 10.0285C6.89893 10.8268 6.25075 11.474 5.45112 11.474ZM10.7853 11.474C9.98567 11.474 9.33741 10.8268 9.33741 10.0285C9.33741 9.23025 9.98567 8.58307 10.7853 8.58307C11.5849 8.58307 12.2332 9.23025 12.2332 10.0285C12.2332 10.8268 11.5849 11.474 10.7853 11.474ZM16.1195 11.474C15.3199 11.474 14.6717 10.8268 14.6717 10.0285C14.6717 9.23025 15.3199 8.58307 16.1195 8.58307C16.9192 8.58307 17.5674 9.23025 17.5674 10.0285C17.5674 10.8268 16.9192 11.474 16.1195 11.474Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+
+                                        <svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-top: -15px;
+                                                margin-left: 8px;">
+                                            <path
+                                                d="M13.6327 18.6744C13.8651 18.6744 14.0944 18.7629 14.2689 18.9314C15.3842 20.0083 17.011 20.3669 18.4572 19.9181C17.5265 17.9791 17.3975 15.7577 18.1188 13.7009C19.0139 11.1418 19.2382 8.57684 18.2195 6.00436C17.3245 3.7445 15.5974 1.86697 13.4116 0.796326C13.5461 1.51322 13.6139 2.24367 13.6139 2.98184C13.6139 6.11507 12.4091 9.06197 10.2215 11.2798C8.03364 13.4978 5.10084 14.745 1.96345 14.7916C1.38055 14.8008 0.800267 14.7665 0.226562 14.6909C1.95083 17.7132 5.20276 19.6817 8.77624 19.7347C10.3395 19.7588 11.8404 19.4313 13.2383 18.7638C13.3641 18.7036 13.4989 18.6744 13.6327 18.6744Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="icons">
+                                    <a href="#">
+                                        <svg width="6" height="17" viewBox="0 0 6 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-top: 10px;">
+                                            <path
+                                                d="M2.63397 0.847351C1.9354 0.847351 1.26544 1.12486 0.771472 1.61882C0.277507 2.11279 0 2.78275 0 3.48132V13.3855C0 14.084 0.277507 14.754 0.771472 15.248C1.26544 15.7419 1.9354 16.0194 2.63397 16.0194C3.33254 16.0194 4.0025 15.7419 4.49647 15.248C4.99043 14.754 5.26794 14.084 5.26794 13.3855V3.48132C5.26794 2.78275 4.99043 2.11279 4.49647 1.61882C4.0025 1.12486 3.33254 0.847351 2.63397 0.847351Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                        <svg width="24" height="28" viewBox="0 0 24 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-left: 6px;
+                                            margin-top: -27px;">
+                                            <path
+                                                d="M20.255 8.80784H12.2852L14.0296 4.44754C14.2791 3.82633 14.3406 3.14555 14.2066 2.48968C14.0726 1.83382 13.7489 1.23174 13.2758 0.758174C13.0097 0.492338 12.6889 0.287609 12.3357 0.158205C11.9825 0.0288009 11.6054 -0.0221772 11.2306 0.00881028C10.8557 0.0397978 10.4921 0.152008 10.1649 0.33765C9.83779 0.523292 9.55498 0.777916 9.33614 1.08384L4.67581 7.60469C3.98024 8.5761 3.20674 9.48927 2.36298 10.3351L0.870345 11.8278C0.802381 11.8956 0.748484 11.9763 0.711745 12.065C0.675005 12.1538 0.656147 12.2489 0.65625 12.3449V23.5638C0.656139 23.7582 0.733132 23.9447 0.870345 24.0824L2.5424 25.762C2.96833 26.1902 3.47493 26.5296 4.03289 26.7607C4.59085 26.9918 5.18909 27.11 5.79302 27.1084H14.8785C15.5958 27.1078 16.2976 26.8995 16.8991 26.5086C17.5006 26.1177 17.976 25.561 18.2678 24.9057L22.7246 14.8779C23.0098 14.2384 23.1562 13.5457 23.1543 12.8455V11.7087C23.1535 10.9398 22.8478 10.2027 22.3043 9.65889C21.7608 9.11509 21.0238 8.80903 20.255 8.80784Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="icons">
+                                    <a href="#">
+                                        <svg width="40" height="48" viewBox="0 0 56 48" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-top: -5px;">
+                                            <g filter="url(#filter0_dd)">
+                                                <path
+                                                    d="M31.1059 7.00027C36.0701 7.02444 40.0884 11.0427 40.1126 16.0069C40.1126 25.1018 23.5563 34.1084 23.5563 34.1084C23.5563 34.1084 7 24.9694 7 16.0069C7 11.0327 11.0324 7.00027 16.0066 7.00027C19.0516 6.97653 21.8982 8.50803 23.5563 11.0621C25.2257 8.52045 28.0651 6.99292 31.1059 7.00027Z"
+                                                    fill="#97AAC3" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_dd" x="0" y="0" width="55.1126" height="47.1084"
+                                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                        result="hardAlpha" />
+                                                    <feOffset dx="5" dy="3" />
+                                                    <feGaussianBlur stdDeviation="5" />
+                                                    <feColorMatrix type="matrix"
+                                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                                        result="effect1_dropShadow" />
+                                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                        result="hardAlpha" />
+                                                    <feOffset dx="-2" dy="-2" />
+                                                    <feGaussianBlur stdDeviation="2.5" />
+                                                    <feColorMatrix type="matrix"
+                                                        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0" />
+                                                    <feBlend mode="normal" in2="effect1_dropShadow"
+                                                        result="effect2_dropShadow" />
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow"
+                                                        result="shape" />
+                                                </filter>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+                                <div class="icons" style="margin-top:10px">
+                                    <a href="#">
+                                        <svg width="20" height="21" viewBox="0 0 17 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.69 2.40918C11.8376 0.906922 9.39787 0.319572 7.01458 0.827856C4.02136 1.44909 1.5929 3.88885 0.97166 6.88207C0.33913 9.95436 1.49124 13.0041 3.95359 14.8678C4.62 15.3648 5.08311 16.1328 5.24124 17.0251V17.0364C5.26383 17.0251 5.29771 17.0251 5.32031 17.0251H12.0974C12.12 17.0251 12.1313 17.0251 12.1539 17.0364V17.0251C12.312 16.1667 12.8203 15.376 13.5997 14.7661C15.5086 13.2526 16.6155 10.9935 16.6155 8.55376C16.6155 6.15918 15.5537 3.92274 13.69 2.40918ZM12.9446 9.11852C12.4815 9.11852 12.0974 8.73448 12.0974 8.27138C12.0974 6.55451 10.7081 5.16521 8.99124 5.16521C8.52814 5.16521 8.1441 4.78117 8.1441 4.31807C8.1441 3.85496 8.52814 3.47093 8.99124 3.47093C11.6343 3.47093 13.7917 5.62831 13.7917 8.27138C13.7917 8.73448 13.4077 9.11852 12.9446 9.11852Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+
+
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-left: 7px;">
+                                            <path
+                                                d="M7.09742 0.719879V2.13178C7.09742 3.21611 6.2051 4.10843 5.12076 4.10843H2.29697C1.34817 4.10843 0.320312 3.38554 0.320312 1.80422V0.719879H7.09742Z"
+                                                fill="#97AAC3" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row" style="height: 30px; background: rgba(255, 255, 255, 0.5); margin-left: -10;
+                        margin-right: -10;">
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count">0</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count">0</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count">0</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count">0</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count">0</p>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row" style="height: 25px; background: rgba(255, 255, 255, 0.5); margin-left: -10;
+                        margin-right: -10;">
+
+                            <div class="col-md-2">
+                                <p class="count-2">Played</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="count-2">Responses</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count-2">Like</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count-2">Love</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="count-2">Insightful</p>
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="clear:both"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="title" style="font-size:14px;">Qcast Responses</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 13 End -->
                 </div>
 
             </div>
@@ -1115,6 +1661,9 @@
         $('#draggable').draggable();
     </script>
 
+    <script>
+
+    </script>
 
     <script>
         function my1() {
@@ -1156,10 +1705,81 @@
             document.getElementById("eight").style.display = "block";
         }
 
-        // function my9(){
-        //     document.getElementById("seventh").style.display = "none";
-        //     document.getElementById("eight").style.display = "block";
-        // }
+        function my9() {
+            document.getElementById("eight").style.display = "none";
+            document.getElementById("ninth").style.display = "block";
+        }
+
+        function my10() {
+            document.getElementById("ninth").style.display = "none";
+            document.getElementById("10").style.display = "block";
+        }
+
+        function my11() {
+            document.getElementById("10").style.display = "none";
+            document.getElementById("11").style.display = "block";
+        }
+
+        function my12() {
+            document.getElementById("11").style.display = "none";
+            document.getElementById("12").style.display = "block";
+        }
+
+        function my13() {
+            document.getElementById("12").style.display = "none";
+            document.getElementById("13").style.display = "block";
+        }
+
+        function my14() {
+            document.getElementById("13").style.display = "none";
+            document.getElementById("14").style.display = "block";
+        }
+
+        function thumb() {
+            document.getElementById("seventh").style.display = "none";
+            document.getElementById("thumb").style.display = "block";
+        }
+
+        function show() {
+            document.getElementById("thumb").style.display = "none";
+            document.getElementById("ninth").style.display = "block";
+        }
+    </script>
+
+    <script>
+        document.getElementById('timer1').innerHTML =
+            01 + ":" + 00;
+        startTimer();
+
+
+        function startTimer() {
+            var presentTime = document.getElementById('timer1').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if (s == 59) {
+                m = m - 1
+            }
+            if (m < 0) {
+                return
+            }
+
+            document.getElementById('timer1').innerHTML =
+                m + ":" + s;
+            console.log(m)
+            setTimeout(startTimer, 1000);
+
+        }
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) {
+                sec = "0" + sec
+            }; // add zero in front of numbers < 10
+            if (sec < 0) {
+                sec = "59"
+            };
+            return sec;
+        }
     </script>
 
 
