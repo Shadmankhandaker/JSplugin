@@ -1947,7 +1947,7 @@
 
   /* 6 */
 
-  .img-2 img {
+  .img-2 video {
 
     border-radius: 50%;
     height: 155px;
@@ -2033,7 +2033,7 @@
     border-radius: 500px;
   }
 
-  .img-7-1 img {
+  .img-7-1 video {
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -2392,6 +2392,13 @@
     border-radius: 2px;
   }
 
+  /* #videoElement{ */
+    /* height: 520px;
+    width: 180px;
+    border-radius: 50%;
+    margin-top: 10px;
+  } */
+
   .search {
     position: absolute;
     width: 90%;
@@ -2671,8 +2678,8 @@
 
               <p class="down-sub-title">Start Recording</p>
 
-              <a href="#" onclick="my6()">
-                <div class="record">
+              <a href="#" onclick="my6()" >
+                <div class="record" id="btnStart" onclick="timedText()">
                   <div class="record-1">
                     <div class="record-2">
                       <div class="record-3">
@@ -2721,9 +2728,10 @@
                 <div class="col-md-12">
                   <div class="record-circle">
                     <div class="img-2">
-                      <img src="check.png" height="30px" width="30px">
-                      <div class="number">
-                        <span class="c" id="5"></span>
+                      <video autoplay="true" style="margin-bottom:30px; height: 150px;">
+                      </video>
+                      <div class="number" id="txt_count" >
+                        5
                       </div>
                     </div>
                   </div>
@@ -2751,11 +2759,10 @@
                 </div>
               </div>
 
-
-              <a href="#" onclick="my7()">
-                <div class="record">
+              <a href="#" onclick="my7()" >
+                <div class="record" id="btnStop">
                   <div class="record-1">
-                    <div class="record-2-6">
+                    <div class="record-2-6" >
 
                     </div>
                   </div>
@@ -2764,7 +2771,7 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:70px; display: none;" id="time-show2" >
+              <div class="row" style="margin-top:70px">
                 <div class="col-md-1">
 
                 </div>
@@ -2841,7 +2848,7 @@
                 <div class="col-md-12">
                   <div class="recorded-circle-7">
                     <div class="img-7-1">
-                      <img src="check.png">
+                      <video id="vid2" autoplay="true"></video>
                     </div>
                   </div>
                 </div>
@@ -3296,18 +3303,18 @@
               <div class="row">
                 <div class="col-md-12">
                   <b>1.</b>
-                  <div class="" style="margin-bottom:50px;">                    
-                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                    
+                  <div class="nine-1">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                   </div>
 
                   <b>2.</b>
-                  <div class="" style="margin-bottom:50px;">
-                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                     
+                  <div class="nine-1">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                   </div>
 
                   <b>3.</b>
-                  <div class="" style="margin-bottom:50px;">                    
-                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">  
+                  <div class="nine-1">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                   </div>
                   <div class="clear:both"></div>
                 </div>
@@ -5395,25 +5402,24 @@
 
           <div class="main">
             <p class="title">Edit Transcript</p>
-
             <p class="sub-title">Your qcast transcript, allows your questions to be found in search engine
               created by </p>
 
             <div class="row">
               <div class="col-md-12">
                 <b>1.</b>
-                <div class="" style="margin-bottom:50px;">                    
-                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                    
+                <div class="nine-1">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                 </div>
 
                 <b>2.</b>
-                <div class="" style="margin-bottom:50px;">
-                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                     
+                <div class="nine-1">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                 </div>
 
                 <b>3.</b>
-                <div class="" style="margin-bottom:50px;">                    
-                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">  
+                <div class="nine-1">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
                 </div>
                 <div class="clear:both"></div>
               </div>
@@ -6160,32 +6166,6 @@
     function my6() {
       document.getElementById("fifth").style.display = "none";
       document.getElementById("sixth").style.display = "block";
-
-      function c() {
-        var n = $('.c').attr('id');
-        var c = n;
-        $('.c').text(c);
-        setInterval(function () {
-          c--;
-          if (c >= 0) {
-            $('.c').text(c);
-          }
-          if (c == 0) {
-            $('.c').text(n);
-          }
-        }, 1000);
-      }
-
-      // Start
-      c();
-
-      $('#time-show2').delay(5000).show(0);
-
-      // Loop
-      // setInterval(function () {
-      //   c();
-      // }, 5000);
-
     }
 
     function my7() {
@@ -6385,8 +6365,117 @@
       }
     });
 
-
     telInput.on("keyup change", reset);
+
+
+    // -------------------------------
+  
+    let constraintObj = { 
+            audio: true, 
+            video: { 
+                facingMode: "user", 
+                width: { min: 640, ideal: 1280, max: 1920 },
+                height: { min: 480, ideal: 720, max: 1080 } 
+            } 
+        }; 
+        // width: 1280, height: 720  -- preference only
+        // facingMode: {exact: "user"}
+        // facingMode: "environment"
+        
+        //handle older browsers that might implement getUserMedia in some way
+        if (navigator.mediaDevices === undefined) {
+            navigator.mediaDevices = {};
+            navigator.mediaDevices.getUserMedia = function(constraintObj) {
+                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                if (!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                }
+                return new Promise(function(resolve, reject) {
+                    getUserMedia.call(navigator, constraintObj, resolve, reject);
+                });
+            }
+        }else{
+            navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                devices.forEach(device=>{
+                    console.log(device.kind.toUpperCase(), device.label);
+                    //, device.deviceId
+                })
+            })
+            .catch(err=>{
+                console.log(err.name, err.message);
+            })
+        }
+
+        navigator.mediaDevices.getUserMedia(constraintObj)
+        .then(function(mediaStreamObj) {
+            //connect the media stream to the first video element
+            let video = document.querySelector('video');
+            if ("srcObject" in video) {
+                video.srcObject = mediaStreamObj;
+            } else {
+                //old version
+                video.src = window.URL.createObjectURL(mediaStreamObj);
+            }
+            
+            video.onloadedmetadata = function(ev) {
+                //show in the video element what is being captured by the webcam
+                video.play();
+            };
+            
+            //add listeners for saving video/audio
+            let start = document.getElementById('btnStart');
+            let stop = document.getElementById('btnStop');
+            let vidSave = document.getElementById('vid2');
+            let mediaRecorder = new MediaRecorder(mediaStreamObj);
+            let chunks = [];
+            
+            start.addEventListener('click', (ev)=>{
+                mediaRecorder.start();
+                console.log(mediaRecorder.state);
+            })
+            stop.addEventListener('click', (ev)=>{
+                mediaRecorder.stop();
+                console.log(mediaRecorder.state);
+            });
+            mediaRecorder.ondataavailable = function(ev) {
+                chunks.push(ev.data);
+            }
+            mediaRecorder.onstop = (ev)=>{
+                let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
+                chunks = [];
+                let videoURL = window.URL.createObjectURL(blob);
+                vidSave.src = videoURL;
+            }
+        })
+        .catch(function(err) { 
+            console.log(err.name, err.message); 
+        });
+
+        
+        /*********************************
+        getUserMedia returns a Promise
+        resolve - returns a MediaStream Object
+        reject returns one of the following errors
+        AbortError - generic unknown cause
+        NotAllowedError (SecurityError) - user rejected permissions
+        NotFoundError - missing media track
+        NotReadableError - user permissions given but hardware/OS error
+        OverconstrainedError - constraint video settings preventing
+        TypeError - audio: false, video: false
+        *********************************/
+
+    // -----------------------------------
+    function timedText() {
+      var x = document.getElementById("txt_count");
+      setTimeout(function(){ x.innerHTML="5" }, 1000);
+      setTimeout(function(){ x.innerHTML="4" }, 2000);
+      setTimeout(function(){ x.innerHTML="3" }, 3000);
+      setTimeout(function(){ x.innerHTML="2" }, 4000);
+      setTimeout(function(){ x.innerHTML="1" }, 5000);
+        setTimeout(function(){ x.innerHTML="" }, 6000);
+  }
+
   </script>
 </body>
 
@@ -6397,3 +6486,5 @@
 
 <!-- height:480
 width:853 -->
+
+<!-- videoElement -->
