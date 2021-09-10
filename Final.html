@@ -2723,7 +2723,7 @@
                     <div class="img-2">
                       <img src="check.png" height="30px" width="30px">
                       <div class="number">
-                        5
+                        <span class="c" id="5"></span>
                       </div>
                     </div>
                   </div>
@@ -2764,7 +2764,7 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:70px">
+              <div class="row" style="margin-top:70px; display: none;" id="time-show2" >
                 <div class="col-md-1">
 
                 </div>
@@ -3296,18 +3296,18 @@
               <div class="row">
                 <div class="col-md-12">
                   <b>1.</b>
-                  <div class="nine-1">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                  <div class="" style="margin-bottom:50px;">                    
+                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                    
                   </div>
 
                   <b>2.</b>
-                  <div class="nine-1">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                  <div class="" style="margin-bottom:50px;">
+                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                     
                   </div>
 
                   <b>3.</b>
-                  <div class="nine-1">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                  <div class="" style="margin-bottom:50px;">                    
+                    <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">  
                   </div>
                   <div class="clear:both"></div>
                 </div>
@@ -5395,24 +5395,25 @@
 
           <div class="main">
             <p class="title">Edit Transcript</p>
+
             <p class="sub-title">Your qcast transcript, allows your questions to be found in search engine
               created by </p>
 
             <div class="row">
               <div class="col-md-12">
                 <b>1.</b>
-                <div class="nine-1">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                <div class="" style="margin-bottom:50px;">                    
+                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                    
                 </div>
 
                 <b>2.</b>
-                <div class="nine-1">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                <div class="" style="margin-bottom:50px;">
+                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">                     
                 </div>
 
                 <b>3.</b>
-                <div class="nine-1">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,</p>
+                <div class="" style="margin-bottom:50px;">                    
+                  <input type="text" class="search" style="outline:none" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">  
                 </div>
                 <div class="clear:both"></div>
               </div>
@@ -6159,6 +6160,32 @@
     function my6() {
       document.getElementById("fifth").style.display = "none";
       document.getElementById("sixth").style.display = "block";
+
+      function c() {
+        var n = $('.c').attr('id');
+        var c = n;
+        $('.c').text(c);
+        setInterval(function () {
+          c--;
+          if (c >= 0) {
+            $('.c').text(c);
+          }
+          if (c == 0) {
+            $('.c').text(n);
+          }
+        }, 1000);
+      }
+
+      // Start
+      c();
+
+      $('#time-show2').delay(5000).show(0);
+
+      // Loop
+      // setInterval(function () {
+      //   c();
+      // }, 5000);
+
     }
 
     function my7() {
