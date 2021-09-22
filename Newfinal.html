@@ -15,6 +15,15 @@
 </head>
 
 <style>
+
+  .img-1 img{
+    border-radius: 50%;
+    height: 155px;
+    width: 155px;
+    margin-top: 13px;
+    margin-left: 13px;
+  }
+
   .intl-tel-input {
     position: relative;
     display: inline-block;
@@ -1958,7 +1967,7 @@
     background-size: cover;
     position: relative;
 
-    -webkit-filter: brightness(60%);
+    /* -webkit-filter: brightness(60%); */
   }
 
   .number {
@@ -1968,7 +1977,7 @@
     font-family: 'Poppins';
     font-size: 55px;
     margin-left: 75px;
-    margin-top: -130px;
+    margin-top: -155px;
     position: absolute;
     font-style: normal;
     font-weight: 700;
@@ -2034,6 +2043,16 @@
   }
 
   .img-7-1 video {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    object-fit: cover;
+    z-index: -100;
+  }
+
+  .img-7-1 img {
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -2392,12 +2411,16 @@
     border-radius: 2px;
   }
 
-  /* #videoElement{ */
-    /* height: 520px;
-    width: 180px;
+  #videoElement{
+    width: 90%;
     border-radius: 50%;
+    height: 160px;
+    margin-left: 9px;
     margin-top: 10px;
-  } */
+    object-fit: cover;
+    z-index: -100;
+}
+  
 
   .search {
     position: absolute;
@@ -2667,7 +2690,7 @@
               <div class="row" style="margin-bottom:30px; height: 150px;">
                 <div class="col-md-12" >
                   <div class="record-circle">
-                    <div class="img-1">
+                    <div class="">
                       <video autoplay="true" id="videoElement"></video>
 
                     </div>
@@ -2698,7 +2721,7 @@
 
           <div id="sixth" style="display:none;">
 
-            <a href="#" onclick="back5()">
+            <!-- <a href="#" onclick="back5()">
               <div class="small-circle" style="margin-left: 40px;  background-color: rgba(255, 255, 255, 0.5); height: 20px;              width: 20px;
                margin-top: 1px;">
                 <div class="ic" style="margin-top:4px; margin-left:4px">
@@ -2710,7 +2733,7 @@
 
                 </div>
               </div>
-            </a>
+            </a> -->
 
 
             <script>
@@ -2728,11 +2751,11 @@
               <div class="row" style="margin-bottom:30px; height: 150px;">
                 <div class="col-md-12">
                   <div class="record-circle">
-                    <div class="img-2">
-                      <video autoplay="true" id="video_torec" style="margin-bottom:30px; height: 150px;"></video>  
-                      <div class="number" id="txt_count" >
-                        5
-                      </div>
+                    <div class="img-2" id="op">
+                      <video autoplay="true" id="video_torec" style="margin-bottom:30px; height: 155px;"></video>                        
+                    </div>
+                    <div class="number" id="txt_count" >
+                      <span class="c" id="5"></span>
                     </div>
                   </div>
                   <div class="clear:both"></div>
@@ -2771,7 +2794,7 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:70px">
+              <div class="row" style="margin-top:70px; display: none;">
                 <div class="col-md-1">
 
                 </div>
@@ -2819,7 +2842,7 @@
           <!-- 7th -->
           <div style="display:none;" id="seventh">
 
-            <a href="#" onclick="back6()">
+            <!-- <a href="#" onclick="back6()">
               <div class="small-circle" style="margin-left: 40px;  background-color: rgba(255, 255, 255, 0.5); height: 20px;              width: 20px;
                margin-top: 1px;">
                 <div class="ic" style="margin-top:4px; margin-left:4px">
@@ -2831,7 +2854,7 @@
 
                 </div>
               </div>
-            </a>
+            </a> -->
 
             <script>
               function back6() {
@@ -2857,7 +2880,7 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:18px;">
+              <div class="row" style="margin-top:18px; display: none; ">
                 <div class="col-md-1">
                   
                 </div>
@@ -6167,6 +6190,61 @@
     function my6() {
       document.getElementById("fifth").style.display = "none";
       document.getElementById("sixth").style.display = "block";
+
+      document.getElementById("op").style.filter = "brightness(60%)";
+      document.getElementById("txt_count").style.filter = "brightness(100%)";
+
+      function c() {
+        var n = $('.c').attr('id');
+        var c = n;
+        $('.c').text(c);
+        setInterval(function () {
+          c--;
+          if (c >= 0) {
+            $('.c').text(c);
+          }
+          if (c == 0) {
+            $('.c').text(" ");
+            // Call Function Here (59) 
+
+            // var textarea = document.getElementById("textarea").onclick = function(){
+            //     myFunction()
+            // }
+            var totalTime = 60
+            var currentTime = totalTime
+            var firstTap = true
+            var timer = null
+
+            // function myFunction() {
+                if (firstTap == true){
+                    firstTap = false
+                    timer = setInterval(function(){
+                        currentTime--
+                        document.getElementById("timer").innerHTML = currentTime;
+                        if (currentTime < 0){
+                            currentTime = totalTime
+                            document.getElementById("timer").innerHTML = currentTime;
+                            clearInterval(timer);
+                            firstTap = true
+                        }
+                    }, 1000)
+                }
+            // }
+
+            document.getElementById("op").style.filter = "brightness(100%)";
+
+             document.getElementById("timer").innerHTML = currentTime
+
+
+          }
+        }, 1000);
+      }
+
+      // Start
+      c();
+
+      $('#time-show2').delay(5000).show(0);
+
     }
 
     function my7() {
@@ -6534,31 +6612,33 @@
   })
   // ----------------------timer 6th page---------
 
-  var textarea = document.getElementById("textarea").onclick = function(){
-        myFunction()
-    }
-    var totalTime = 60
-    var currentTime = totalTime
-    var firstTap = true
-    var timer = null
+  // var textarea = document.getElementById("textarea").onclick = function(){
+  //       myFunction()
+  //   }
+  //   var totalTime = 60
+  //   var currentTime = totalTime
+  //   var firstTap = true
+  //   var timer = null
 
-    function myFunction() {
-        if (firstTap == true){
-            firstTap = false
-            timer = setInterval(function(){
-                currentTime--
-                document.getElementById("timer").innerHTML = currentTime;
-                if (currentTime < 0){
-                    currentTime = totalTime
-                    document.getElementById("timer").innerHTML = currentTime;
-                    clearInterval(timer);
-                    firstTap = true
-                }
-            }, 1000)
-        }
-    }
+  //   function myFunction() {
+  //       if (firstTap == true){
+  //           firstTap = false
+  //           timer = setInterval(function(){
+  //               currentTime--
+  //               document.getElementById("timer").innerHTML = currentTime;
+  //               if (currentTime < 0){
+  //                   currentTime = totalTime
+  //                   document.getElementById("timer").innerHTML = currentTime;
+  //                   clearInterval(timer);
+  //                   firstTap = true
+  //               }
+  //           }, 1000)
+  //       }
+  //   }
 
-    document.getElementById("timer").innerHTML = currentTime
+    
+
+  //   document.getElementById("timer").innerHTML = currentTime
   </script>
 </body>
 
