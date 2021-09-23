@@ -2880,7 +2880,7 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:18px; display: none; ">
+              <div class="row" style="margin-top:18px; display: none; " id="thumbnails-preview">
                 <div class="col-md-1">
                   
                 </div>
@@ -6525,8 +6525,10 @@
             let vidSave = document.getElementById('vid2');
             let mediaRecorder = new MediaRecorder(mediaStreamObj);
             let chunks = [];
+            let startTime;
             
             start.addEventListener('click', (ev)=>{
+              setTimeout(function(){startTime = new Date(new Date().setMilliseconds(0000)).getTime()},5000);
               console.log(cam_value)
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
@@ -6543,6 +6545,20 @@
                 chunks = [];
                 let videoURL = window.URL.createObjectURL(blob);
                 vidSave.src = videoURL;
+
+                //added by arslan
+                var cloneVideo = vidSave.cloneNode(true);
+                cloneVideo.recordedDuration = (new Date().getTime()-startTime)/1000;
+                cloneVideo.src = cloneVideo.src+'#t=0.1';
+                vidSave.onplay = function(){  }
+                
+                cloneVideo.addEventListener('loadeddata',function(){
+                  generateThumbnails(cloneVideo);
+                })
+                
+                cloneVideo.onended = function(){
+                  document.getElementById('thumbnails-preview').style.display = 'flex';
+                }
             }
         })
         .catch(function(err) { 
@@ -6562,7 +6578,34 @@
         TypeError - audio: false, video: false
         *********************************/
 
-   
+   function generateThumbnails(cloneVideo){
+      console.log('duration : '+cloneVideo.recordedDuration+' frams : '+(cloneVideo.recordedDuration/5));
+      const vidDiv = cloneVideo.recordedDuration/5;
+      var c = 0;
+      //const video = document.getElementById("video");
+      const canvas = document.createElement("canvas");
+      // scale the canvas accordingly
+      //canvas.width = video.videoWidth;canvas.height = video.videoHeight;
+      canvas.width = 100;canvas.height = 100;
+      // draw the video at that frame     
+      var key = 1;
+      if(cloneVideo.fastSeek) { cloneVideo.fastSeek(c); } else { cloneVideo.currentTime = c; };
+      //while(c<cloneVideo.recordedDuration){
+        
+        cloneVideo.addEventListener('seeked',function(){
+          if(key > 5){ return 0; }
+          if(cloneVideo.fastSeek){
+            cloneVideo.fastSeek(c);
+          } else {
+            cloneVideo.currentTime = c;
+          }
+          canvas.getContext('2d').drawImage(cloneVideo, 0, 0, canvas.width, canvas.height);
+          const dataURL = canvas.toDataURL();
+          console.log('value of '+key+' is at '+c);
+          document.getElementById('thumbnails-preview').children[key].children[0].children[0].children[0].src = dataURL;
+          c += vidDiv,key++;
+        });
+    }
      
 
     // -----------------audio------------------
