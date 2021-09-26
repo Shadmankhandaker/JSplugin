@@ -6206,7 +6206,7 @@
           if (c == 0) {
             $('.c').text(" ");
             // Call Function Here (59) 
-
+            document.getElementById("btnStop").style.backgroundColor = "#02789C";
             // var textarea = document.getElementById("textarea").onclick = function(){
             //     myFunction()
             // }
@@ -6587,7 +6587,7 @@
     function sendData(data) {}
     btnStart.onclick = e => {
         btnStart.disabled = true;
-        btnStart.style.backgroundColor = "blue"
+        btnStart.style.backgroundColor = "#02789C"
         btnStop.disabled=false;
         audioChunks = [];
         rec.start();
