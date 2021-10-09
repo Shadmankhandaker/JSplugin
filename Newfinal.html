@@ -2070,6 +2070,16 @@
     background-size: cover;
     position: relative;
   }
+  .img-7 video{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    object-fit: cover;
+    background-size: cover;
+    position: relative;
+  }
 
   .img-7 {
     border-radius: 50%;
@@ -2121,7 +2131,8 @@
   .button-1 {
     height: 35px;
     width: 115px;
-    margin-top: 50px;
+   /* margin-top: 50px;*/
+    margin-top: 10px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2433,6 +2444,12 @@
     backdrop-filter: blur(30px);
     border-radius: 10px;
   }
+
+  div#thumbnails-preview .small-circle {
+      position: unset ;
+  }
+
+
 </style>
 
 <!doctype html>
@@ -2763,11 +2780,11 @@
               </div>
 
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7" id='timerappendDiv'>
                   <p class="time" id="timer">60</p>
                 </div>
                 <div class="col-md-5">
-                  <p class="stop">Next &nbsp;<span class="arrow">
+                  <p  class="startNext" id="startNext">Next &nbsp;<span class="arrow">
                       <a href="#">
 
                         <svg width="18" height="12" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2782,7 +2799,16 @@
                 </div>
               </div>
 
-              <a href="#" onclick="my7()" >
+              <!-- <a href="#" onclick="my7()" >
+                <div class="record" id="btnStop">
+                  <div class="record-1">
+                    <div class="record-2-6" >
+
+                    </div>
+                  </div>
+                </div>
+              </a> -->
+              <a href="javascript:void(0)" onclick="append_item()" >
                 <div class="record" id="btnStop">
                   <div class="record-1">
                     <div class="record-2-6" >
@@ -2794,45 +2820,8 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:70px; display: none;">
-                <div class="col-md-1">
-
-                </div>
-                <div class="col-md-2">
-                  1.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  2.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  3.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  4.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1">
-
-                </div>
+              <div class="row" id="recordedItems" style="margin-top:70px;">
+               
               </div>
             </div>
           </div>
@@ -2881,52 +2870,7 @@
               <div class="clear:both"></div>
 
               <div class="row" style="margin-top:18px; display: none; " id="thumbnails-preview">
-                <div class="col-md-1">
-                  
-                </div>
-                <div class="col-md-2">
-                  1.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  2.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  3.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  4.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  5.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png " height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1">
-
-                </div>
+               
               </div>
 
 
@@ -6129,18 +6073,21 @@
       document.getElementById("first").style.display = "none";
       document.getElementById("second").style.display = "block";
     }
-
+   
     function my3() {
       document.getElementById("second").style.display = "none";
       document.getElementById("third").style.display = "block";
 
+      
+      startTimer();
+
+    }
+    var t;
+    function startTimer() {
+       
       // Timer
       document.getElementById('timer1').innerHTML =
         01 + ":" + 00;
-      startTimer();
-
-
-      function startTimer() {
         var presentTime = document.getElementById('timer1').innerHTML;
         var timeArray = presentTime.split(/[:]+/);
         var m = timeArray[0];
@@ -6155,13 +6102,13 @@
         document.getElementById('timer1').innerHTML =
           m + ":" + s;
         console.log(m)
-        setTimeout(startTimer, 1000);
+       t = setTimeout(startTimer, 1000);
 
-
+       $('#time-show').delay(60000).show(0);
 
       }
 
-      function checkSecond(sec) {
+    function checkSecond(sec) {
         if (sec < 10 && sec >= 0) {
           sec = "0" + sec
         }; // add zero in front of numbers < 10
@@ -6170,9 +6117,11 @@
         };
         return sec;
       }
-
-
-      $('#time-show').delay(60000).show(0);
+    function clearTimer() {
+      
+      //document.getElementById('timer').remove();
+       clearInterval(t);
+      // clearTimeout(t);
 
 
     }
@@ -6185,6 +6134,7 @@
     function my5() {
       document.getElementById("fourth").style.display = "none";
       document.getElementById("fifth").style.display = "block";
+      start_media_strim(constraintObj);
     }
 
     function my6() {
@@ -6194,7 +6144,18 @@
       document.getElementById("op").style.filter = "brightness(60%)";
       document.getElementById("txt_count").style.filter = "brightness(100%)";
 
-      function c() {
+      document.getElementById("recordedItems").innerHTML="";
+      document.getElementById("thumbnails-preview").innerHTML="";
+
+      // Start
+      c();
+
+      $('#time-show2').delay(5000).show(0);
+
+    }
+    var videoRecortInterval;
+    
+    function c() {
         var n = $('.c').attr('id');
         var c = n;
         $('.c').text(c);
@@ -6218,7 +6179,7 @@
             // function myFunction() {
                 if (firstTap == true){
                     firstTap = false
-                    timer = setInterval(function(){
+                    videoRecortInterval=timer = setInterval(function(){
                         currentTime--
                         document.getElementById("timer").innerHTML = currentTime;
                         if (currentTime < 0){
@@ -6240,16 +6201,27 @@
         }, 1000);
       }
 
-      // Start
-      c();
-
-      $('#time-show2').delay(5000).show(0);
-
-    }
-
-    function my7() {
+    function my7(obj=null) {
+ 
+      document.getElementById('vid2').src=obj.src;
+      
+      
       document.getElementById("sixth").style.display = "none";
       document.getElementById("seventh").style.display = "block";
+    }
+
+    function append_item(){
+      document.getElementById('vid2').src="";
+      document.getElementById("recordedItems").innerHTML="";
+      document.getElementById("thumbnails-preview").innerHTML="";
+      
+      document.getElementById("sixth").style.display = "none";
+      document.getElementById("seventh").style.display = "none";
+
+      //my5
+      document.getElementById("fourth").style.display = "none";
+      document.getElementById("fifth").style.display = "block";
+      //start_media_strim(constraintObj);
     }
 
     function my8() {
@@ -6394,6 +6366,7 @@
 
 
   <script>
+   
     var telInput = $("#phone"),
       errorMsg = $("#error-msg"),
       validMsg = $("#valid-msg");
@@ -6479,7 +6452,7 @@
     }; 
 
                 //handle older browsers that might implement getUserMedia in some way
-                if (navigator.mediaDevices === undefined) {
+        if (navigator.mediaDevices === undefined) {
             navigator.mediaDevices = {};
             navigator.mediaDevices.getUserMedia = function(constraintObj) {
                 let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -6503,6 +6476,10 @@
             })
         }
 
+       function start_media_strim(constraintObj){
+          navigator.mediaDevices.getUserMedia({audio:true})
+          .then(stream => {handlerFunction(stream)});
+
         navigator.mediaDevices.getUserMedia(constraintObj)
         .then(function(mediaStreamObj) {
             //connect the media stream to the first video element
@@ -6521,6 +6498,7 @@
             
             //add listeners for saving video/audio
             let start = document.getElementById('btnStart');
+            let startNext = document.getElementById('startNext');
             let stop = document.getElementById('btnStop');
             let vidSave = document.getElementById('vid2');
             let mediaRecorder = new MediaRecorder(mediaStreamObj);
@@ -6532,10 +6510,20 @@
               console.log(cam_value)
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
+                
+            })
+             startNext.addEventListener('click', (ev)=>{
+              //start.click();
+              //startTimer();
+              mediaRecorder.stop();
+              setTimeout(function(){startTime = new Date(new Date().setMilliseconds(0000)).getTime()},5000);
+              c();
+              mediaRecorder.start();
             })
             stop.addEventListener('click', (ev)=>{
                 mediaRecorder.stop();
                 console.log(mediaRecorder.state);
+                
             });
             mediaRecorder.ondataavailable = function(ev) {
                 chunks.push(ev.data);
@@ -6543,8 +6531,59 @@
             mediaRecorder.onstop = (ev)=>{
                 let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
                 chunks = [];
+                
                 let videoURL = window.URL.createObjectURL(blob);
                 vidSave.src = videoURL;
+                clearInterval(videoRecortInterval);
+                 //clearTimeout(vidrecordtimer);
+                 
+                //count recorded Items
+                var count = document.getElementById("recordedItems").childElementCount;
+                if(count<10){
+                  
+                  var vidoItem = document.createElement("video"); 
+                    vidoItem.src=videoURL;  
+                    var att_onclick = document.createAttribute("onclick");      
+                    att_onclick.value = "my7(this)";                           
+                    vidoItem.setAttributeNode(att_onclick); 
+
+                   
+                   var img7 = document.createElement("div"); 
+                   img7.className="img-7";   
+                   img7.appendChild(vidoItem);
+
+
+
+                  var circalnode = document.createElement("div"); 
+                    circalnode.className="small-circle";  
+                     circalnode.appendChild(img7);         
+                  
+
+                    var node = document.createElement("div"); 
+                    node.className="col-md-1"; 
+                    var textnode = document.createTextNode(count+1);
+                    node.appendChild(textnode);
+                    node.appendChild(circalnode);          
+
+                    var node2 = node.cloneNode(true);                   
+                    document.getElementById("recordedItems").appendChild(node);
+                    document.getElementById("thumbnails-preview").appendChild(node2);
+                    document.getElementById('thumbnails-preview').style.display = 'flex';
+
+
+                    // img7.addEventListener('click', (e)=>{
+                    //  //console.log(ev);
+                    // // document.getElementById('vid2').src=e.target.src;
+                    //   // my7();
+                    //   // alert('ok');
+                          
+                    //   });
+
+                }else{
+                  alert('You have 10 video recorded');
+                }
+                 
+
 
                 //added by arslan
                 var cloneVideo = vidSave.cloneNode(true);
@@ -6553,17 +6592,20 @@
                 vidSave.onplay = function(){  }
                 
                 cloneVideo.addEventListener('loadeddata',function(){
-                  generateThumbnails(cloneVideo);
+                 // generateThumbnails(cloneVideo);
                 })
                 
                 cloneVideo.onended = function(){
-                  document.getElementById('thumbnails-preview').style.display = 'flex';
+                 // document.getElementById('thumbnails-preview').style.display = 'flex';
                 }
+
+                
             }
         })
         .catch(function(err) { 
             console.log(err.name, err.message); 
         });
+       }
 
         
         /*********************************
@@ -6577,7 +6619,7 @@
         OverconstrainedError - constraint video settings preventing
         TypeError - audio: false, video: false
         *********************************/
-
+  
    function generateThumbnails(cloneVideo){
       console.log('duration : '+cloneVideo.recordedDuration+' frams : '+(cloneVideo.recordedDuration/5));
       const vidDiv = cloneVideo.recordedDuration/5;
@@ -6610,8 +6652,8 @@
 
     // -----------------audio------------------
 
-    navigator.mediaDevices.getUserMedia({audio:true})
-    .then(stream => {handlerFunction(stream)})
+    // navigator.mediaDevices.getUserMedia({audio:true})
+    // .then(stream => {handlerFunction(stream)})
 
     function handlerFunction(stream) {
       rec = new MediaRecorder(stream);
@@ -6638,7 +6680,7 @@
         btnStop.onclick = e => {
         btnStart.disabled = false;
         stop.disabled=true;
-        rec.stop();
+        //rec.stop();
         }
     // ------------------------------------
         var count_num =document.getElementById("textchange");
