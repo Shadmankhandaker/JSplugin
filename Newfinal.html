@@ -15,8 +15,7 @@
 </head>
 
 <style>
-
-  .img-1 img{
+  .img-1 img {
     border-radius: 50%;
     height: 155px;
     width: 155px;
@@ -1769,7 +1768,8 @@
   .main {
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    height: 450px;
+    /* height: 450px; */
+    height: 515px;
     width: 300px;
     border-radius: 30px;
     box-sizing: border-box;
@@ -2071,6 +2071,17 @@
     position: relative;
   }
 
+  .img-7 video {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    object-fit: cover;
+    background-size: cover;
+    position: relative;
+  }
+
   .img-7 {
     border-radius: 50%;
     height: 40px;
@@ -2121,7 +2132,8 @@
   .button-1 {
     height: 35px;
     width: 115px;
-    margin-top: 50px;
+    /* margin-top: 50px;*/
+    margin-top: 10px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2411,7 +2423,7 @@
     border-radius: 2px;
   }
 
-  #videoElement{
+  #videoElement {
     width: 90%;
     border-radius: 50%;
     height: 160px;
@@ -2419,8 +2431,8 @@
     margin-top: 10px;
     object-fit: cover;
     z-index: -100;
-}
-  
+  }
+
 
   .search {
     position: absolute;
@@ -2432,6 +2444,27 @@
     box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
     backdrop-filter: blur(30px);
     border-radius: 10px;
+  }
+
+  div#thumbnails-preview .small-circle {
+    position: unset;
+  }
+
+  div#recordedItems .col-md-1 {
+    padding-right: 35px;
+    padding-left: 15px;
+    padding-bottom: 35px;
+  }
+  div#thumbnails-preview .col-md-1 {
+    padding-right: 35px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+  div#thumbnails-preview {
+      padding-left: 10px;
+  }
+  div#recordedItems{
+    padding-left: 10px;
   }
 </style>
 
@@ -2652,7 +2685,8 @@
 
               <p class="down-sub-title">Account Verified</p>
 
-              <button type="button" id="prev_vid_btn" class="btn btn-outline-light" onclick="my5()">Record Qcast</button>
+              <button type="button" id="prev_vid_btn" class="btn btn-outline-light" onclick="my5()">Record
+                Qcast</button>
             </div>
           </div>
 
@@ -2688,7 +2722,7 @@
               <p class="title">Record Qcast</p>
 
               <div class="row" style="margin-bottom:30px; height: 150px;">
-                <div class="col-md-12" >
+                <div class="col-md-12">
                   <div class="record-circle">
                     <div class="">
                       <video autoplay="true" id="videoElement"></video>
@@ -2702,11 +2736,11 @@
 
               <p class="down-sub-title">Start Recording</p>
 
-              <a href="#" onclick="my6()" >
-                <div class="record"  id="btnStart" >
-                  <div class="record-1" id="textarea"   >
+              <a href="#" onclick="my6()">
+                <div class="record" id="btnStart">
+                  <div class="record-1" id="textarea">
                     <div class="record-2" onclick="onvideo()">
-                      <div class="record-3" id="textchange" >
+                      <div class="record-3" id="textchange">
 
                       </div>
                     </div>
@@ -2752,9 +2786,9 @@
                 <div class="col-md-12">
                   <div class="record-circle">
                     <div class="img-2" id="op">
-                      <video autoplay="true" id="video_torec" style="margin-bottom:30px; height: 155px;"></video>                        
+                      <video autoplay="true" id="video_torec" style="margin-bottom:30px; height: 155px;"></video>
                     </div>
-                    <div class="number" id="txt_count" >
+                    <div class="number" id="txt_count">
                       <span class="c" id="5"></span>
                     </div>
                   </div>
@@ -2763,11 +2797,11 @@
               </div>
 
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7" id='timerappendDiv'>
                   <p class="time" id="timer">60</p>
                 </div>
                 <div class="col-md-5">
-                  <p class="stop">Next &nbsp;<span class="arrow">
+                  <p class="startNext" id="startNext">Next &nbsp;<span class="arrow">
                       <a href="#">
 
                         <svg width="18" height="12" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2782,10 +2816,19 @@
                 </div>
               </div>
 
-              <a href="#" onclick="my7()" >
+              <!-- <a href="#" onclick="my7()" >
                 <div class="record" id="btnStop">
                   <div class="record-1">
                     <div class="record-2-6" >
+
+                    </div>
+                  </div>
+                </div>
+              </a> -->
+              <a href="javascript:void(0)" onclick="append_item()">
+                <div class="record" id="btnStop">
+                  <div class="record-1">
+                    <div class="record-2-6">
 
                     </div>
                   </div>
@@ -2794,45 +2837,8 @@
 
               <div class="clear:both"></div>
 
-              <div class="row" style="margin-top:70px; display: none;">
-                <div class="col-md-1">
+              <div class="row" id="recordedItems" style="margin-top:70px;">
 
-                </div>
-                <div class="col-md-2">
-                  1.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  2.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  3.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  4.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1">
-
-                </div>
               </div>
             </div>
           </div>
@@ -2872,7 +2878,7 @@
                   <div class="recorded-circle-7">
                     <div class="img-7-1">
                       <video id="vid2" autoplay="true"></video>
-                      <audio style="z-index: -10; display: none;" autoplay id=recordedAudio></audio> 
+                      <audio style="z-index: -10; display: none;" autoplay id=recordedAudio></audio>
                     </div>
                   </div>
                 </div>
@@ -2881,52 +2887,7 @@
               <div class="clear:both"></div>
 
               <div class="row" style="margin-top:18px; display: none; " id="thumbnails-preview">
-                <div class="col-md-1">
-                  
-                </div>
-                <div class="col-md-2">
-                  1.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  2.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  3.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  4.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png" height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  5.
-                  <div class="small-circle">
-                    <div class="img-7">
-                      <img src="check.png " height="20px" width="20px">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1">
 
-                </div>
               </div>
 
 
@@ -3246,7 +3207,8 @@
                               fill="#97AAC3" />
                           </svg>
                         </span>
-                        Undo Trim</p>
+                        Undo Trim
+                      </p>
                     </div>
                   </a>
                 </div>
@@ -5354,7 +5316,8 @@
                             fill="#97AAC3" />
                         </svg>
                       </span>
-                      Undo Trim</p>
+                      Undo Trim
+                    </p>
                   </div>
                 </a>
               </div>
@@ -6058,13 +6021,13 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -6134,45 +6097,51 @@
       document.getElementById("second").style.display = "none";
       document.getElementById("third").style.display = "block";
 
+
+     // startTimer();
+
+    }
+    let t =null;
+    function startTimer() {
+
       // Timer
       document.getElementById('timer1').innerHTML =
         01 + ":" + 00;
-      startTimer();
-
-
-      function startTimer() {
-        var presentTime = document.getElementById('timer1').innerHTML;
-        var timeArray = presentTime.split(/[:]+/);
-        var m = timeArray[0];
-        var s = checkSecond((timeArray[1] - 1));
-        if (s == 59) {
-          m = m - 1
-        }
-        if (m < 0) {
-          return
-        }
-
-        document.getElementById('timer1').innerHTML =
-          m + ":" + s;
-        console.log(m)
-        setTimeout(startTimer, 1000);
-
-
-
+      var presentTime = document.getElementById('timer1').innerHTML;
+      var timeArray = presentTime.split(/[:]+/);
+      var m = timeArray[0];
+      var s = checkSecond((timeArray[1] - 1));
+      if (s == 59) {
+        m = m - 1
+      }
+      if (m < 0) {
+        return
       }
 
-      function checkSecond(sec) {
-        if (sec < 10 && sec >= 0) {
-          sec = "0" + sec
-        }; // add zero in front of numbers < 10
-        if (sec < 0) {
-          sec = "59"
-        };
-        return sec;
-      }
-
+      document.getElementById('timer1').innerHTML =
+        m + ":" + s;
+      console.log(m)
+      
+      t = setTimeout(startTimer, 1000);
 
       $('#time-show').delay(60000).show(0);
+
+    }
+
+    function checkSecond(sec) {
+      if (sec < 10 && sec >= 0) {
+        sec = "0" + sec
+      }; // add zero in front of numbers < 10
+      if (sec < 0) {
+        sec = "59"
+      };
+      return sec;
+    }
+    function clearTimer() {
+
+      //document.getElementById('timer').remove();
+      clearInterval(t);
+      // clearTimeout(t);
 
 
     }
@@ -6185,6 +6154,7 @@
     function my5() {
       document.getElementById("fourth").style.display = "none";
       document.getElementById("fifth").style.display = "block";
+      start_media_strim(constraintObj);
     }
 
     function my6() {
@@ -6194,64 +6164,102 @@
       document.getElementById("op").style.filter = "brightness(60%)";
       document.getElementById("txt_count").style.filter = "brightness(100%)";
 
-      function c() {
-        var n = $('.c').attr('id');
-        var c = n;
-        $('.c').text(c);
-        setInterval(function () {
-          c--;
-          if (c >= 0) {
-            $('.c').text(c);
-          }
-          if (c == 0) {
-            $('.c').text(" ");
-            
-            document.getElementById("btnStop").style.backgroundColor = "#02789C";
-            // Call Function Here (59) 
-
-            // var textarea = document.getElementById("textarea").onclick = function(){
-            //     myFunction()
-            // }
-            var totalTime = 60
-            var currentTime = totalTime
-            var firstTap = true
-            var timer = null
-
-            // function myFunction() {
-                if (firstTap == true){
-                    firstTap = false
-                    timer = setInterval(function(){
-                        currentTime--
-                        document.getElementById("timer").innerHTML = currentTime;
-                        if (currentTime < 0){
-                            currentTime = totalTime
-                            document.getElementById("timer").innerHTML = currentTime;
-                            clearInterval(timer);
-                            firstTap = true
-                        }
-                    }, 1000)
-                }
-            // }
-
-            document.getElementById("op").style.filter = "brightness(100%)";
-
-             document.getElementById("timer").innerHTML = currentTime
-
-
-          }
-        }, 1000);
-      }
+      document.getElementById("recordedItems").innerHTML = "";
+      document.getElementById("thumbnails-preview").innerHTML = "";
 
       // Start
       c();
 
-      $('#time-show2').delay(5000).show(0);
+      //$('#time-show2').delay(5000).show(0);
 
     }
+    var videoRecortInterval = null;
+    let timer = null;
+    function c() {
+      if(videoRecortInterval !=null){
+        // End timer
+        clearInterval(videoRecortInterval);
+        videoRecortInterval = null;
+      }
+      var n = $('.c').attr('id');
+      var c = n;
+      $('.c').text(c);
+      videoRecortInterval = setInterval(function () {
+        c--;
+        if (c >= 0) {
+          $('.c').text(c);
+        }
+        if (c == 0) {
+          $('.c').text(" ");
+          // Call Function Here (59) 
 
-    function my7() {
+          // var textarea = document.getElementById("textarea").onclick = function(){
+          //     myFunction()
+          // }
+          var totalTime = 60
+          var currentTime = totalTime
+          var firstTap = true
+          
+            
+          // function myFunction() {
+          if (firstTap == true) {
+            firstTap = false
+            if(timer !=null){
+              // End timer
+              clearInterval(timer);
+              timer = null;
+            }
+             timer = setInterval(function () {
+              currentTime--
+              document.getElementById("timer").innerHTML = currentTime;
+              if (currentTime < 0) {
+                currentTime = totalTime
+                document.getElementById("timer").innerHTML = currentTime;
+                
+                firstTap = true
+              }
+            }, 1000)
+          }
+          // }
+
+          document.getElementById("op").style.filter = "brightness(100%)";
+
+          document.getElementById("timer").innerHTML = currentTime
+
+
+        }
+      }, 1000);
+    }
+
+    function my7(obj = null) {
+
+     // document.getElementById('vid2').src = obj.src;
+      document.getElementById('vid2').src = obj.getAttribute('data-url');
+
+
       document.getElementById("sixth").style.display = "none";
       document.getElementById("seventh").style.display = "block";
+    }
+
+    function append_item() {
+     
+       var recordedItems = document.getElementById('recordedItems');
+          //recordedItems.firstChild.img;
+          var abcurl = document.getElementById('recordedItems').children[0].children[0].children[0].children[0].getAttribute('data-url');
+          
+      document.getElementById('vid2').src = abcurl;
+      // document.getElementById("recordedItems").innerHTML = "";
+      // document.getElementById("thumbnails-preview").innerHTML = "";
+
+  
+
+      //my5
+      // document.getElementById("fourth").style.display = "none";
+      // document.getElementById("fifth").style.display = "block";
+      //start_media_strim(constraintObj);
+      document.getElementById("sixth").style.display = "none";
+      document.getElementById("seventh").style.display = "block";
+
     }
 
     function my8() {
@@ -6396,6 +6404,7 @@
 
 
   <script>
+
     var telInput = $("#phone"),
       errorMsg = $("#error-msg"),
       validMsg = $("#valid-msg");
@@ -6419,7 +6428,7 @@
       separateDialCode: true,
       initialCountry: "auto",
       geoIpLookup: function (callback) {
-        $.get("http://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+        $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
           var countryCode = (resp && resp.country) ? resp.country : "";
           callback(countryCode);
         });
@@ -6451,210 +6460,351 @@
 
     // -----------------------prev_video---------
 
-  var prev = document.getElementById("prev_vid_btn");
-  var video = document.querySelector("#videoElement");
+    var prev = document.getElementById("prev_vid_btn");
+    var video = document.querySelector("#videoElement");
 
-  prev.addEventListener("click",() => {
-    if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
+    prev.addEventListener("click", () => {
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }
+
     })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
-
-  })
 
     // ----------------video_rec-----------------
 
     let cam_value = true
 
     function onvideo() {
-     return cam_value = true
+      return cam_value = true
     }
 
-    let constraintObj = { 
-        audio: false, 
-        video: `${cam_value}`      
-    }; 
+    // let constraintObj = {
+    //   audio: true,
+    //   video: `${cam_value}`
+    // };
+    let constraintObj = {
+      audio: true,
+      video: true
+    };
 
-                //handle older browsers that might implement getUserMedia in some way
-                if (navigator.mediaDevices === undefined) {
-            navigator.mediaDevices = {};
-            navigator.mediaDevices.getUserMedia = function(constraintObj) {
-                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                if (!getUserMedia) {
-                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-                }
-                return new Promise(function(resolve, reject) {
-                    getUserMedia.call(navigator, constraintObj, resolve, reject);
-                });
-            }
-        }else{
-            navigator.mediaDevices.enumerateDevices()
-            .then(devices => {
-                devices.forEach(device=>{
-                    console.log(device.kind.toUpperCase(), device.label);
-                    //, device.deviceId
-                })
-            })
-            .catch(err=>{
-                console.log(err.name, err.message);
-            })
+    //handle older browsers that might implement getUserMedia in some way
+    if (navigator.mediaDevices === undefined) {
+      navigator.mediaDevices = {};
+      navigator.mediaDevices.getUserMedia = function (constraintObj) {
+        let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        if (!getUserMedia) {
+          return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
         }
-
-        navigator.mediaDevices.getUserMedia(constraintObj)
-        .then(function(mediaStreamObj) {
-            //connect the media stream to the first video element
-            let video = document.getElementById('video_torec');
-            if ("srcObject" in video) {
-                video.srcObject = mediaStreamObj;
-            } else {
-                //old version
-                // video.src = window.URL.createObjectURL(mediaStreamObj);
-            }
-            
-            video.onloadedmetadata = function(ev) {
-                //show in the video element what is being captured by the webcam
-                video.play();
-            };
-            
-            //add listeners for saving video/audio
-            let start = document.getElementById('btnStart');
-            let stop = document.getElementById('btnStop');
-            let vidSave = document.getElementById('vid2');
-            let mediaRecorder = new MediaRecorder(mediaStreamObj);
-            let chunks = [];
-            let startTime;
-            
-            start.addEventListener('click', (ev)=>{
-              setTimeout(function(){startTime = new Date(new Date().setMilliseconds(0000)).getTime()},5000);
-              console.log(cam_value)
-                mediaRecorder.start();
-                console.log(mediaRecorder.state);
-            })
-            stop.addEventListener('click', (ev)=>{
-                mediaRecorder.stop();
-                console.log(mediaRecorder.state);
-            });
-            mediaRecorder.ondataavailable = function(ev) {
-                chunks.push(ev.data);
-            }
-            mediaRecorder.onstop = (ev)=>{
-                let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
-                chunks = [];
-                let videoURL = window.URL.createObjectURL(blob);
-                vidSave.src = videoURL;
-
-                //added by arslan
-                var cloneVideo = vidSave.cloneNode(true);
-                cloneVideo.recordedDuration = (new Date().getTime()-startTime)/1000;
-                cloneVideo.src = cloneVideo.src+'#t=0.1';
-                vidSave.onplay = function(){  }
-                
-                cloneVideo.addEventListener('loadeddata',function(){
-                  generateThumbnails(cloneVideo);
-                })
-                
-                cloneVideo.onended = function(){
-                  document.getElementById('thumbnails-preview').style.display = 'flex';
-                }
-            }
-        })
-        .catch(function(err) { 
-            console.log(err.name, err.message); 
+        return new Promise(function (resolve, reject) {
+          getUserMedia.call(navigator, constraintObj, resolve, reject);
         });
+      }
+    } else {
+      navigator.mediaDevices.enumerateDevices()
+        .then(devices => {
+          devices.forEach(device => {
+            console.log(device.kind.toUpperCase(), device.label);
+            //, device.deviceId
+          })
+        })
+        .catch(err => {
+          console.log(err.name, err.message);
+        })
+    }
 
-        
-        /*********************************
-        getUserMedia returns a Promise
-        resolve - returns a MediaStream Object
-        reject returns one of the following errors
-        AbortError - generic unknown cause
-        NotAllowedError (SecurityError) - user rejected permissions
-        NotFoundError - missing media track
-        NotReadableError - user permissions given but hardware/OS error
-        OverconstrainedError - constraint video settings preventing
-        TypeError - audio: false, video: false
-        *********************************/
+    function start_media_strim(constraintObj) {
+      // navigator.mediaDevices.getUserMedia({ audio: true })
+      //   .then(stream => { handlerFunction(stream) });
+      document.getElementById('btnStart').style.display = "none";
 
-   function generateThumbnails(cloneVideo){
-      console.log('duration : '+cloneVideo.recordedDuration+' frams : '+(cloneVideo.recordedDuration/5));
-      const vidDiv = cloneVideo.recordedDuration/5;
+
+      navigator.mediaDevices.getUserMedia(constraintObj)
+        .then(function (mediaStreamObj) {
+          //connect the media stream to the first video element
+          let video = document.getElementById('video_torec');
+          if ("srcObject" in video) {
+            video.srcObject = mediaStreamObj;
+          } else {
+            //old version
+            // video.src = window.URL.createObjectURL(mediaStreamObj);
+          }
+
+          video.onloadedmetadata = function (ev) {
+            //show in the video element what is being captured by the webcam
+            video.play();
+            video.muted = true;
+            document.getElementById('btnStart').style.display = "block";
+          };
+
+          //add listeners for saving video/audio
+          let start = document.getElementById('btnStart');
+          let startNext = document.getElementById('startNext');
+          let stop = document.getElementById('btnStop');
+          let vidSave = document.getElementById('vid2');
+          let mediaRecorder = new MediaRecorder(mediaStreamObj);
+          let chunks = [];
+          let startTime;
+          let timeoutHandle =null;
+
+          start.addEventListener('click', (ev) => {
+            
+             if (mediaRecorder.state === 'inactive') {
+              
+              if (timeoutHandle != null){
+                window.clearTimeout(timeoutHandle); 
+                timeoutHandle =null;
+              }
+              timeoutHandle = setTimeout(function () {
+                mediaRecorder.start();
+                stop.style.background = "blue";
+                startTime = new Date(new Date().setMilliseconds(0000)).getTime()
+              }, 5000);
+              
+              console.log(cam_value)
+
+              console.log(mediaRecorder.state);
+             }
+
+          })
+          startNext.addEventListener('click', (ev) => {
+            //start.click();
+            //startTimer();
+            
+            if (timeoutHandle != null){
+                window.clearTimeout(timeoutHandle); 
+                timeoutHandle =null;
+              }
+            if (mediaRecorder.state ==='recording') {
+              
+                mediaRecorder.stop();
+                stop.style.background = "";
+                console.log(cam_value)
+                console.log(mediaRecorder.state);
+
+                clearInterval(videoRecortInterval);
+            clearTimeout(t);
+            clearInterval(timer);
+            }else{
+              timeoutHandle = setTimeout(function () {
+                mediaRecorder.start();
+                stop.style.background = "blue";
+                startTime = new Date(new Date().setMilliseconds(0000)).getTime()
+              }, 5000);
+              
+              c();
+            }
+
+           
+
+            
+           
+          })
+          stop.addEventListener('click', (ev) => {
+            if(mediaRecorder.state==='recording'){
+              mediaRecorder.stop();
+              console.log(mediaRecorder.state);
+            }
+            stop.style.background = "";
+
+          });
+          mediaRecorder.ondataavailable = function (ev) {
+            //alert('load');
+            
+            if (timeoutHandle != null){
+                  window.clearTimeout(timeoutHandle); 
+                  timeoutHandle =null;
+            }
+            chunks.push(ev.data);
+          }
+          mediaRecorder.onstart = function() {
+             // alert('start');
+            }
+          mediaRecorder.onstop = (ev) => {
+            let blob = new Blob(chunks, { 'type': 'video/mp4;' });
+            chunks = [];
+            
+            let videoURL = window.URL.createObjectURL(blob);
+            //vidSave.src = videoURL;
+            clearInterval(videoRecortInterval);
+            clearTimeout(t);
+            clearInterval(timer);
+            //clearTimeout(vidrecordtimer);
+
+            //count recorded Items
+            var count = document.getElementById("recordedItems").childElementCount;
+            if (count < 10) {
+
+              var vidoItem = document.createElement("img");
+              //vidoItem.src = videoURL;
+                  var newvid = document.getElementById('video_torec');
+                    var canvas = document.createElement("canvas");
+ 
+                    canvas.width = 100; canvas.height = 100;
+
+                    canvas.getContext('2d').drawImage(newvid, 0, 0, canvas.width, canvas.height); 
+                   var dataURL = canvas.toDataURL();
+                   vidoItem.setAttribute('src', dataURL);
+                   vidoItem.setAttribute('data-url', videoURL);
+              var att_onclick = document.createAttribute("onclick");
+              att_onclick.value = "my7(this)";
+              vidoItem.setAttributeNode(att_onclick);
+
+
+              
+
+
+              var img7 = document.createElement("div");
+              img7.className = "img-7";
+              img7.appendChild(vidoItem);
+
+
+
+              var circalnode = document.createElement("div");
+              circalnode.className = "small-circle";
+              circalnode.appendChild(img7);
+
+              var node = document.createElement("div");
+              node.className = "col-md-1";
+              var textnode = document.createTextNode(count + 1);
+              node.appendChild(textnode);
+              node.appendChild(circalnode);
+
+              var node2 = node.cloneNode(true);
+              document.getElementById("recordedItems").appendChild(node);
+              document.getElementById("thumbnails-preview").appendChild(node2);
+              document.getElementById('thumbnails-preview').style.display = 'flex';
+
+
+            } else {
+              alert('You have 10 video recorded');
+            }
+
+            //added by arslan
+            var cloneVideo = vidSave.cloneNode(true);
+            cloneVideo.recordedDuration = (new Date().getTime() - startTime) / 1000;
+            cloneVideo.src = cloneVideo.src + '#t=0.1';
+            vidSave.onplay = function () { }
+
+            cloneVideo.addEventListener('loadeddata', function () {
+              // generateThumbnails(cloneVideo);
+            })
+
+            cloneVideo.onended = function () {
+              // document.getElementById('thumbnails-preview').style.display = 'flex';
+            }
+
+
+          }
+        })
+        .catch(function (err) {
+          console.log(err.name, err.message);
+        });
+    }
+
+
+    /*********************************
+    getUserMedia returns a Promise
+    resolve - returns a MediaStream Object
+    reject returns one of the following errors
+    AbortError - generic unknown cause
+    NotAllowedError (SecurityError) - user rejected permissions
+    NotFoundError - missing media track
+    NotReadableError - user permissions given but hardware/OS error
+    OverconstrainedError - constraint video settings preventing
+    TypeError - audio: false, video: false
+    *********************************/
+
+    function generateThumbnails(cloneVideo) {
+      console.log('duration : ' + cloneVideo.recordedDuration + ' frams : ' + (cloneVideo.recordedDuration / 5));
+      const vidDiv = cloneVideo.recordedDuration / 5;
       var c = 0;
       //const video = document.getElementById("video");
       const canvas = document.createElement("canvas");
       // scale the canvas accordingly
       //canvas.width = video.videoWidth;canvas.height = video.videoHeight;
-      canvas.width = 100;canvas.height = 100;
+      canvas.width = 100; canvas.height = 100;
       // draw the video at that frame     
       var key = 1;
-      if(cloneVideo.fastSeek) { cloneVideo.fastSeek(c); } else { cloneVideo.currentTime = c; };
+      if (cloneVideo.fastSeek) { cloneVideo.fastSeek(c); } else { cloneVideo.currentTime = c; };
       //while(c<cloneVideo.recordedDuration){
-        
-        cloneVideo.addEventListener('seeked',function(){
-          if(key > 5){ return 0; }
-          if(cloneVideo.fastSeek){
-            cloneVideo.fastSeek(c);
-          } else {
-            cloneVideo.currentTime = c;
-          }
-          canvas.getContext('2d').drawImage(cloneVideo, 0, 0, canvas.width, canvas.height);
-          const dataURL = canvas.toDataURL();
-          console.log('value of '+key+' is at '+c);
-          document.getElementById('thumbnails-preview').children[key].children[0].children[0].children[0].src = dataURL;
-          c += vidDiv,key++;
-        });
+
+      cloneVideo.addEventListener('seeked', function () {
+        if (key > 5) { return 0; }
+        if (cloneVideo.fastSeek) {
+          cloneVideo.fastSeek(c);
+        } else {
+          cloneVideo.currentTime = c;
+        }
+        canvas.getContext('2d').drawImage(cloneVideo, 0, 0, canvas.width, canvas.height);
+        const dataURL = canvas.toDataURL();
+        console.log('value of ' + key + ' is at ' + c);
+        document.getElementById('thumbnails-preview').children[key].children[0].children[0].children[0].src = dataURL;
+        c += vidDiv, key++;
+      });
     }
-     
+
 
     // -----------------audio------------------
 
-    navigator.mediaDevices.getUserMedia({audio:true})
-    .then(stream => {handlerFunction(stream)})
+    // navigator.mediaDevices.getUserMedia({audio:true})
+    // .then(stream => {handlerFunction(stream)})
 
     function handlerFunction(stream) {
+      
       rec = new MediaRecorder(stream);
+     
       rec.ondataavailable = e => {
+        
         audioChunks.push(e.data);
-        if (rec.state == "inactive"){
-          let blob = new Blob(audioChunks,{type:'audio/mp3'});
+        if (rec.state == "inactive") {
+          let blob = new Blob(audioChunks, { type: 'audio/mp3' });
           recordedAudio.src = URL.createObjectURL(blob);
-          recordedAudio.controls=true;
-          recordedAudio.autoplay=true; 
-          sendData(blob)
-          }
+          recordedAudio.controls = true;
+          recordedAudio.autoplay = true;
+          sendData(blob);
+
+
+          
+          
         }
       }
+    }
+
+    function sendData(data) { }
+    // btnStart.onclick = e => {
+     
+    //   btnStart.disabled = true;
+    //   btnStart.style.backgroundColor = "blue"
+    //   btnStop.disabled = false;
+    //   audioChunks = [];
+    //   rec.start();
+    // }
+    // btnStop.onclick = e => {
+      
+    //   btnStart.disabled = false;
+    //   stop.disabled = true;
+    //   rec.stop();
+    // }
     
-    function sendData(data) {}
-    btnStart.onclick = e => {
-        btnStart.disabled = true;
-        btnStart.style.backgroundColor = "#02789C"
-        btnStop.disabled=false;
-        audioChunks = [];
-        rec.start();
-        }
-        btnStop.onclick = e => {
-        btnStart.disabled = false;
-        stop.disabled=true;
-        rec.stop();
-        }
     // ------------------------------------
-        var count_num =document.getElementById("textchange");
+    var count_num = document.getElementById("textchange");
 
 
-    count_num.addEventListener("click",() => {
+    count_num.addEventListener("click", () => {
       var x = document.getElementById("txt_count");
-      setTimeout(function(){ x.innerHTML="5" }, 1000);
-      setTimeout(function(){ x.innerHTML="4" }, 2000);
-      setTimeout(function(){ x.innerHTML="3" }, 3000);
-      setTimeout(function(){ x.innerHTML="2" }, 4000);
-      setTimeout(function(){ x.innerHTML="1" }, 5000);
-        setTimeout(function(){ x.innerHTML="" }, 6000);
-  })
+      setTimeout(function () { x.innerHTML = "5" }, 1000);
+      setTimeout(function () { x.innerHTML = "4" }, 2000);
+      setTimeout(function () { x.innerHTML = "3" }, 3000);
+      setTimeout(function () { x.innerHTML = "2" }, 4000);
+      setTimeout(function () { x.innerHTML = "1" }, 5000);
+      setTimeout(function () { x.innerHTML = "" }, 6000);
+    })
   // ----------------------timer 6th page---------
 
   // var textarea = document.getElementById("textarea").onclick = function(){
@@ -6681,7 +6831,7 @@
   //       }
   //   }
 
-    
+
 
   //   document.getElementById("timer").innerHTML = currentTime
   </script>
