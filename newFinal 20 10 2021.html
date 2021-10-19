@@ -6316,7 +6316,7 @@ formData.append('file', file);
         method: "post"
     }).then(data => data.json())
   .then((text) => {
-    alert('user added '+ JSON.stringify(text))
+    console.log('user added '+ JSON.stringify(text))
    
     document.getElementById("profileNameFromSignup").innerHTML=text.data.username
     document.getElementById("imageSignUp").src=text.data.profilePic
@@ -6695,7 +6695,7 @@ fetch('http://sylo.eu-west-2.elasticbeanstalk.com/uploadGetMediaID',{
       })
   }).then(data => data.json())
 .then((text) => {
-alert('Media id uploaded '+ JSON.stringify(text))
+console.log('Media id uploaded '+ JSON.stringify(text))
   var id =text.data
   var formdata = new FormData();
 formdata.append("title", "This is Qcast title");
@@ -6725,7 +6725,7 @@ fetch('http://sylo.eu-west-2.elasticbeanstalk.com/addQcast',{
   }).then(data => data.json()).then((text) => {
     
     
-  alert("Qcast added "+ JSON.stringify(text))}).catch(function (error) {
+  console.log("Qcast added "+ JSON.stringify(text))}).catch(function (error) {
   console.log('request failed', error)
 })
 
@@ -7012,7 +7012,7 @@ fetch('http://sylo.eu-west-2.elasticbeanstalk.com/addQcast',{
 
 }).then(data => data.json())
   .then((text) => {
-alert("videoId: "+text.data.previewVideoId)
+console.log("videoId: "+text.data.previewVideoId)
   }).catch(function (error) {
     console.log('request failed', error)
   })
